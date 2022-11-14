@@ -1,0 +1,29 @@
+	  "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+                
+            }
+          },
+          "to": [
+            {
+              "set_variable": {
+                "name": "dfn_mode",
+                "value": 1
+              }
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "d"
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "set_variable": {
+                "name": "dfn_mode",
+                "value": 0
+              }
+            }
+以字母d为例，直接设置from 到to中某一个变量，那么只要按下d就会进入dfn_mode=1，按住的时间超过1000ms，再抬起没有没有任何反应，不会输出d，1000ms以内就算press alone，输出字母d。无论合适只要松开d，那么dfn_mode变为0. 这导致只要按住d就会进入一种模式,只有松开才会解除,导致d被按住时再去按别的键(没被映射别的功能的键)会发生粘滞,比如打字的时候,da可能因为指法的问题,d还没有抬起a就按下了.造成只输出了a没有输出da,解决办法在d.json .思想是d单独按的时候就是d,d按住500ms以内在按定义好的别的键比如j,就输出映射的新建.但按a的话,因为a没有定义映射,所以输出的还是da
+
