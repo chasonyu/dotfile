@@ -47,11 +47,7 @@ yabai -m config window_opacity               off
 yabai -m config external_bar all:0:0
 
 # ================================ 规则 ================================
-# 打开系统偏好设置，不使用平铺模式
-yabai -m rule --add app="^系统偏好设置$" manage=off
-yabai -m rule --add app="^提醒事项$" manage=off
-yabai -m rule --add app="^关于本机$" manage=off
-otherApp='^(阿里钉|阿里郎|App Store|IINA|Xnip|Calendar|日历|System Preferences|系统偏好设置|Mail|微信|WeChatc|QQ|印象笔记|灵犀|网易云音乐|Alfred Preferences|Tencent Lemon|企业微信|Todoist|Input Source Pro|Spotify)$'
+otherApp='^(Thor Launcher|AltTab|提醒事项|关于本机|Karabiner-EventViewer|Karabiner-Elements|阿里钉|阿里郎|App Store|IINA|Xnip|Calendar|日历|System Preferences|系统偏好设置|Mail|微信|WeChatc|QQ|印象笔记|灵犀|网易云音乐|Alfred Preferences|Tencent Lemon|企业微信|Todoist|Input Source Pro|Spotify)$'
 
 yabai -m rule --add app="${otherApp}" manage=off
 yabai -m rule --add app="^(Google Chrome|Microsoft Edge)$" role="AXWindow" subrole="AXStandardWindow" manage=on layer=below

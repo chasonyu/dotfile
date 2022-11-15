@@ -2,8 +2,56 @@
   "title": "yabai shortcuts",
   "rules": [
     {
-      "description": "窗口切换option + 数字",
+      "description": "窗口切换option + 数字/n/p/tab",
       "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m space --focus recent"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m space --focus next || /opt/homebrew/bin/yabai -m space --focus first"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m space --focus prev || /opt/homebrew/bin/yabai -m space --focus last"
+            }
+          ]
+        },
         {
           "type": "basic",
           "from": {
@@ -39,85 +87,328 @@
         {
           "type": "basic",
           "from": {
-            "key_code": "c",
+            "key_code": "3",
             "modifiers": {
                 "mandatory": [
-                  "right_control",
-                  "left_command"
+                  "left_option"
               ]
             }
           },
           "to": [
             {
-              "shell_command": "open '/Applications/Google Chrome.app'"
+              "shell_command": "/opt/homebrew/bin/yabai -m space --focus 3"
             }
           ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "i",
+            "key_code": "4",
             "modifiers": {
                 "mandatory": [
-                  "right_control",
-                  "left_command"
+                  "left_option"
               ]
             }
           },
           "to": [
             {
-              "shell_command": "open '/Applications/iTerm.app'"
+              "shell_command": "/opt/homebrew/bin/yabai -m space --focus 4"
             }
           ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "p",
+            "key_code": "5",
             "modifiers": {
                 "mandatory": [
-                  "right_control",
-                  "left_command"
+                  "left_option"
               ]
             }
           },
           "to": [
             {
-              "shell_command": "open '/Applications/Parallels Desktop.app'"
+              "shell_command": "/opt/homebrew/bin/yabai -m space --focus 5"
             }
           ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "q",
+            "key_code": "6",
             "modifiers": {
                 "mandatory": [
-                  "right_control",
-                  "left_command"
+                  "left_option"
               ]
             }
           },
           "to": [
             {
-              "shell_command": "open '/Applications/QQ.app'"
+              "shell_command": "/opt/homebrew/bin/yabai -m space --focus 6"
             }
           ]
         },
         {
           "type": "basic",
           "from": {
-            "key_code": "s",
+            "key_code": "7",
             "modifiers": {
                 "mandatory": [
-                  "right_control",
-                  "left_command"
+                  "left_option"
               ]
             }
           },
           "to": [
             {
-              "shell_command": "open '/Applications/Safari.app'"
+              "shell_command": "/opt/homebrew/bin/yabai -m space --focus 7"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "8",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m space --focus 8"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "9",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m space --focus 9"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "0",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m space --focus 10"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "同一空间激活窗口 option + hjkl",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --focus west"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --focus south"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --focus north"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --focus east"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "同一空间交换窗口位置option + hjkl",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --swap west"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --swap south"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --swap north"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --swap east"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "窗口旋转/调转 option + r/y",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "r",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --swap west"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "y",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m space --mirror y-axis"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "移动窗口至下一个显示器 option + `",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "b",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open ~/.config/yabai/config/yabai/send_to_next_display.sh"
             }
           ]
         }
