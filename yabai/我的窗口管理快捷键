@@ -1,0 +1,188 @@
+我的窗口管理快捷键
+# 切换回最近的一个桌面
+alt - tab : yabai -m space --focus recent
+# 切换回第一个桌面
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5
+alt - 6 : yabai -m space --focus 6
+alt - 7 : yabai -m space --focus 7
+alt - 8 : yabai -m space --focus 8
+alt - 9 : yabai -m space --focus 9
+
+# focus window(同一个空间切换窗口焦点)
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# swap window(同一个空间交换窗口位置)
+shift + alt - h : yabai -m window --swap west
+shift + alt - j : yabai -m window --swap south
+shift + alt - k : yabai -m window --swap north
+shift + alt - l : yabai -m window --swap east
+
+# move window(同一个空间移动窗口位置)(没配置，上面的够用了)
+# shift + cmd - h : yabai -m window --warp west
+# shift + cmd - j : yabai -m window --warp south
+# shift + cmd - k : yabai -m window --warp north
+# shift + cmd - l : yabai -m window --warp east
+
+# 同一旋转窗口布局
+alt - r         : yabai -m space --rotate 90
+
+# mirror tree y-axis(纵轴调换窗口)
+alt - y : yabai -m space --mirror y-axis
+
+# mirror tree x-axis(横轴调换窗口)
+#alt - x : yabai -m space --mirror x-axis
+
+# fast focus desktop(切换空间焦点)
+# 0x32 equals to `
+alt - 0x32 : ~/.config/yabai/send_to_next_display.sh
+
+# 移动窗口至下一个显示器
+# 0x32 equals to `
+option - tab : ~/.config/yabai/send_to_next_display.sh move_window
+
+# send window to monitor and follow focus(将当前活跃窗口发送到指定显示器)
+# 有些重复了
+# ctrl + cmd - x  : yabai -m window --display recent; yabai -m display --focus recent
+# ctrl + cmd - z  : yabai -m window --display prev; yabai -m display --focus prev
+# ctrl + cmd - c  : yabai -m window --display next; yabai -m display --focus next
+ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
+ctrl + cmd - 2  : yabai -m window --display 2; yabai -m display --focus 2
+ctrl + cmd - 3  : yabai -m window --display 3; yabai -m display --focus 3
+
+# 关闭当前桌面
+shift + alt - w : yabai -m space --destroy
+
+# 把窗口发送到桌面，并跟随过去 send window to desktop and follow focus
+# 没有这个使用习惯
+shift + cmd - 1 : yabai -m window --space  1; yabai -m space --focus 1
+shift + cmd - 2 : yabai -m window --space  2; yabai -m space --focus 2
+shift + cmd - 3 : yabai -m window --space  3; yabai -m space --focus 3
+shift + cmd - 4 : yabai -m window --space  4; yabai -m space --focus 4
+shift + cmd - 5 : yabai -m window --space  5; yabai -m space --focus 5
+shift + cmd - 6 : yabai -m window --space  6; yabai -m space --focus 6
+shift + cmd - 7 : yabai -m window --space  7; yabai -m space --focus 7
+shift + cmd - 8 : yabai -m window --space  8; yabai -m space --focus 8
+shift + cmd - 9 : yabai -m window --space  9; yabai -m space --focus 9
+
+# 把窗口发送到下个桌面，并跟随过去，当桌面跨显示器时有bug
+alt + shift - p : (yabai -m window --space prev && yabai -m space --focus prev) \
+	|| (yabai -m window --space last && yabai -m space --focus last)
+alt + shift - n : (yabai -m window --space next && yabai -m space --focus next) \
+	|| (yabai -m window --space first && yabai -m space --focus first)
+
+
+# 恢复窗口大小
+shift + cmd - 0 : yabai -m space --balance
+
+# 最大化
+ctrl + alt - return : yabai -m window --grid 1:1:0:0:1:1
+
+# 浮动窗口左右贴边
+# shift + alt - left   : yabai -m window --grid 1:2:0:0:1:1
+# shift + alt - right  : yabai -m window --grid 1:2:1:0:1:1
+
+# focus monitor(切换显示器焦点)
+# 用不上 option + ` 够用了
+# ctrl + alt - x  : yabai -m display --focus recent
+# ctrl + alt - z  : yabai -m display --focus prev
+# ctrl + alt - c  : yabai -m display --focus next
+ctrl + alt - 1  : yabai -m display --focus 1
+ctrl + alt - 2  : yabai -m display --focus 2
+ctrl + alt - 3  : yabai -m display --focus 3
+
+# 调整窗口大小,仅限非浮动窗口，浮动窗口就变成了移动位置
+option - left : yabai -m window --resize left:-50:0; yabai -m window --resize right:-50:0
+option - down : yabai -m window --resize bottom:0:50; yabai -m window --resize top:0:50
+option - up : yabai -m window --resize top:0:-50; yabai -m window --resize bottom:0:-50
+option - right : yabai -m window --resize right:50:0; yabai -m window --resize left:50:0
+
+
+# 移动窗口、用不上
+# shift + ctrl - a : yabai -m window --move rel:-20:0
+# shift + ctrl - s : yabai -m window --move rel:0:20
+# shift + ctrl - w : yabai -m window --move rel:0:-20
+# shift + ctrl - d : yabai -m window --move rel:20:0
+
+# increase window size(增加窗口大小aswd)  用不上
+shift + alt - a : yabai -m window --resize left:-20:0
+shift + alt - s : yabai -m window --resize bottom:0:20
+shift + alt - w : yabai -m window --resize top:0:-20
+shift + alt - d : yabai -m window --resize right:20:0
+
+# decrease window size(减少窗口大小aswd)  用不上
+# shift + cmd - a : yabai -m window --resize left:20:0
+# shift + cmd - s : yabai -m window --resize bottom:0:-20
+# shift + cmd - w : yabai -m window --resize top:0:20
+# shift + cmd - d : yabai -m window --resize right:-20:0
+
+
+# 重启 Yabai
+shift+ alt - r : /usr/bin/env osascript <<< "display notification \"正在重启 Yabai\" with title \"Yabai\""; launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
+
+# 创建一个桌面，移动当前窗口过去，并聚焦过去
+alt - c : ~/.config/yabai/create_new_space.sh 1
+
+# 创建一个桌面，并聚焦过去
+shift + alt - c : ~/.config/yabai/create_new_space.sh
+
+
+# 非浮动窗口单个窗进入或退出全屏)
+shift + alt - s : yabai -m window --toggle zoom-fullscreen
+
+# 在其父空间切换大小
+# alt - d : yabai -m window --toggle zoom-parent
+
+
+# 切换该窗口是否显示border
+# 用不上
+shift + alt - b : yabai -m window --toggle border
+
+
+# 切换分割方式
+# 很低频
+shift + alt - m : yabai -m window --toggle split
+
+
+# change layout of desktop(更换layout方式)
+# 用不上
+ctrl + alt - a : yabai -m space --layout bsp
+ctrl + alt - d : yabai -m space --layout float
+
+# 窗口切换浮动模式，置顶、切换space也始终置顶
+alt - p : yabai -m window --toggle sticky;\
+          yabai -m window --toggle topmost;
+          #yabai -m window --toggle border;\
+          # yabai -m window --toggle pip
+
+
+
+# 告知新窗口在那个位置创建，并给出区域提示，用不上
+# ctrl + alt - h : yabai -m window --insert west
+
+
+todo 
+
+1. 浮动窗口最大化 用临时文件存储布局，可以来回切合；浮动窗口最大化和非浮动窗口最大化用一个快捷键
+2. 发送窗口到下一个桌面时，focus的bug
+
+
+
+
+
+
+
+
+
+
+
+
+
+

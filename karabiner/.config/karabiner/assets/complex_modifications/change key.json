@@ -153,6 +153,32 @@
           ]
         }
       ]
+    },
+    {
+      "description": "; to option",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_alt"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "semicolon"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

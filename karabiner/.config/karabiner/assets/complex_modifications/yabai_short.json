@@ -2,24 +2,8 @@
   "title": "yabai shortcuts",
   "rules": [
     {
-      "description": "窗口切换option + 数字/n/p/tab",
+      "description": "窗口切换option + 数字/n/p",
       "manipulators": [
-        {
-          "type": "basic",
-          "from": {
-            "key_code": "tab",
-            "modifiers": {
-                "mandatory": [
-                  "left_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "shell_command": "/opt/homebrew/bin/yabai -m space --focus recent"
-            }
-          ]
-        },
         {
           "type": "basic",
           "from": {
@@ -284,7 +268,7 @@
       ]
     },
     {
-      "description": "同一空间交换窗口位置option + hjkl",
+      "description": "同一空间交换窗口位置shift option + hjkl",
       "manipulators": [
         {
           "type": "basic",
@@ -394,12 +378,12 @@
       ]
     },
     {
-      "description": "移动窗口至下一个显示器 option + `",
+      "description": "切换焦点到下一显示器 option + `",
       "manipulators": [
         {
           "type": "basic",
           "from": {
-            "key_code": "b",
+            "key_code": "grave_accent_and_tilde",
             "modifiers": {
                 "mandatory": [
                   "left_option"
@@ -408,7 +392,361 @@
           },
           "to": [
             {
-              "shell_command": "open ~/.config/yabai/config/yabai/send_to_next_display.sh"
+              "shell_command": "/bin/sh ~/.config/yabai/config/yabai/send_to_next_display.sh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "移动窗口至下一个显示器 option + tab",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/bin/sh ~/.config/yabai/config/yabai/send_to_next_display.sh send_window"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "把窗口发送到上/下个桌面 并切换过去shift option + p/n",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "(/opt/homebrew/bin/yabai -m window --space next && /opt/homebrew/bin/yabai -m space --focus next) || (/opt/homebrew/bin/yabai -m window --space first && /opt/homebrew/bin/yabai -m space --focus first)"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "p",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "(/opt/homebrew/bin/yabai -m window --space prev && /opt/homebrew/bin/yabai -m space --focus prev) || (/opt/homebrew/bin/yabai -m window --space last && /opt/homebrew/bin/yabai -m space --focus last)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "创建桌面，（移动当前窗口过去+ shift ），并跟随焦点 option + c",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/bin/bash ~/.config/yabai/config/yabai/creat_new_space.sh move_window"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "c",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/bin/bash ~/.config/yabai/config/yabai/creat_new_space.sh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "窗口平衡/窗口最大化 shift option + d/s",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "d",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m space --balance"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "s",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "调整窗口大小 option + 方向键",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --resize left:-50:0; /opt/homebrew/bin/yabai -m window --resize right:-50:0"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "down_arrow",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --resize bottom:0:50; /opt/homebrew/bin/yabai -m window --resize top:0:50"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "up_arrow",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --resize top:0:-50; /opt/homebrew/bin/yabai -m window --resize bottom:0:-50"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --resize right:50:0; /opt/homebrew/bin/yabai -m window --resize left:50:0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "浮动窗口左右贴边 shift option + 方向键",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "left_arrow",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --grid 1:2:0:0:1:1"
+            }
+          ]
+        },
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "right_arrow",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --grid 1:2:1:0:1:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "重启yabai shift option + r",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "r",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/usr/bin/env osascript <<< \"display notification \\\"正在重启 Yabai\\\" with title \\\"Yabai\\\"\"; launchctl kickstart -k \"gui/${UID}/homebrew.mxcl.yabai\""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "在父空间放大缩小 shift option + a",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "a",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --toggle zoom-parent"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "切换窗口分割方式 shift option + m",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "m",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m window --toggle split"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "当桌面为空时关闭桌面option + x",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "x",
+            "modifiers": {
+                "mandatory": [
+                  "left_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/bin/sh ~/.config/yabai/config/yabai/close_space_when_space_empty.sh"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "当桌面为不空时也关闭桌面option + x shift option + x",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "x",
+            "modifiers": {
+                "mandatory": [
+                  "left_option",
+                  "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/opt/homebrew/bin/yabai -m space --destroy"
             }
           ]
         }
