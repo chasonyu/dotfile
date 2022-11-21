@@ -25,7 +25,7 @@ yabai -m config mouse_action1                move
 # fn + 右键 
 yabai -m config mouse_action2                resize
 # 焦点跟随鼠标 默认off: 关闭  autoraise:自动提升 autofocus: 自动对焦
-yabai -m config focus_follows_mouse          autofocus
+yabai -m config focus_follows_mouse          off
 # 设置鼠标是否跟随当前活动窗口 默认 off: 关闭 on: 开启
 yabai -m config mouse_follows_focus          on
 
