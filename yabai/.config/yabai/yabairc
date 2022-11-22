@@ -25,7 +25,7 @@ yabai -m config mouse_action1                move
 # fn + 右键 
 yabai -m config mouse_action2                resize
 # 焦点跟随鼠标 默认off: 关闭  autoraise:自动提升 autofocus: 自动对焦
-yabai -m config focus_follows_mouse          off
+yabai -m config focus_follows_mouse          autofocus
 # 设置鼠标是否跟随当前活动窗口 默认 off: 关闭 on: 开启
 yabai -m config mouse_follows_focus          on
 
@@ -51,7 +51,7 @@ otherApp1='^(微力同步|Bob|自动切换输入法 专业版|百度网盘|Mos|�
 otherApp2='^(Thor Launcher|AltTab|提醒事项|关于本机|Karabiner-EventViewer|Karabiner-Elements|阿里钉|阿里郎)$'
 otherApp3='^(App Store|IINA|Xnip|Calendar|日历|System Preferences|系统偏好设置|Mail|微信|WeChatc|QQ|印象笔记)$'
 otherApp4='^(灵犀|网易云音乐|Alfred Preferences|Tencent Lemon|企业微信|Todoist|Input Source Pro|Spotify)$'
-otherApp5='^(Cleaner|钉钉会议|微信)$'
+otherApp5='^(Cleaner|钉钉会议|微信|iStat Menus)$'
 
 yabai -m rule --add app="${otherApp1}" manage=off
 yabai -m rule --add app="${otherApp2}" manage=off
@@ -77,7 +77,7 @@ yabai -m config insert_feedback_color   0xffd75f5f
 # jetbrain_apps="^(IntelliJ IDEA|WebStorm|PyCharm|CLion|GoLand)$"
 # yabai -m rule --add app="${jetbrain_apps}" title="^(Preferences|Project Structure|Plugins|Run/Debug Configurations|Edit configuration settings)$" manage=off
 
-yabai -m rule --add app="^(Microsoft Edge)$" role="AXWindow" subrole="AXStandardWindow" # layer=below
+# yabai -m rule --add app="^(Microsoft Edge)$" role="AXWindow" subrole="AXStandardWindow" layer=below
 
 echo "yabai configuration loaded.."
 
