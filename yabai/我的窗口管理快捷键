@@ -167,6 +167,15 @@ alt - p : yabai -m window --toggle sticky;\
 # 告知新窗口在那个位置创建，并给出区域提示，用不上
 # ctrl + alt - h : yabai -m window --insert west
 
+# 当前窗口在浮动模式和平铺模式互相切换，并会记忆上次的位置
+alt - f : ~/.config/yabai/toggle-window-floating-tiling.sh
+
+# Stack
+# 就用两个映射吧，alt - s进入或者退出stack，alt - d 切换到下一个stack
+alt - s : ${HOME}/.config/yabai/toggle-window-bsp-stack.sh
+alt - d : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+
+
 
 todo 
 
