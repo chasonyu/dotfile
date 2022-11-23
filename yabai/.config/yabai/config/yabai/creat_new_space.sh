@@ -7,14 +7,14 @@ set -x
 
 moveCurrentWindow=${1:-}
 
-/opt/homebrew/bin/yabai -m space --create
+/usr/local/bin/yabai -m space --create
 
-[[ ! -z $moveCurrentWindow ]] && windowId="$(/opt/homebrew/bin/yabai -m query --spaces --display | /opt/homebrew/bin/jq 'map(select(."has-focus"))[-1].id')"
-spaceIndex="$(/opt/homebrew/bin/yabai -m query --spaces --display | /opt/homebrew/bin/jq 'map(select (."is-native-fullscreen" == false))[-1].index')"
+[[ ! -z $moveCurrentWindow ]] && windowId="$(/usr/local/bin/yabai -m query --spaces --display | /usr/local/bin/jq 'map(select(."has-focus"))[-1].id')"
+spaceIndex="$(/usr/local/bin/yabai -m query --spaces --display | /usr/local/bin/jq 'map(select (."is-native-fullscreen" == false))[-1].index')"
 
 if [[ ! -z $moveCurrentWindow && ! -z $windowId && $windowId != 'null' ]]
 then
-  /opt/homebrew/bin/yabai -m window --space ${spaceIndex}
+  /usr/local/bin/yabai -m window --space ${spaceIndex}
 fi
 
-/opt/homebrew/bin/yabai -m space --focus  ${spaceIndex}
+/usr/local/bin/yabai -m space --focus  ${spaceIndex}

@@ -1,8 +1,8 @@
 #!/bin/bash
 PATH=$PATH:~/.local/bin
 
-current_space_index="$(/opt/homebrew/bin/yabai -m query --spaces --space | /opt/homebrew/bin/jq '.index')"
-recent_space_index="$(/opt/homebrew/bin/yabai -m query --spaces --space recent | /opt/homebrew/bin/jq '.index')"
+current_space_index="$(/usr/local/bin/yabai -m query --spaces --space | /usr/local/bin/jq '.index')"
+recent_space_index="$(/usr/local/bin/yabai -m query --spaces --space recent | /usr/local/bin/jq '.index')"
 
 #echo "recent: $(yabai -m query --spaces --space recent)" >> /tmp/T/ss.log
 #echo "current: $(yabai -m query --spaces --space)" >> /tmp/T/ss.log
@@ -13,10 +13,10 @@ recent_space_index="$(/opt/homebrew/bin/yabai -m query --spaces --space recent |
 # 再关闭space2时，跳转到space0，由于没有space0，命令阻塞
 # 因此判断recent index是否等于0，如果为0，表示连续关闭space，但由于没有space stack，简单地focus prev处理
 if [[ -z $recent_space_index || "0" = $recent_space_index ]]; then
-  /opt/homebrew/bin/yabai -m space --focus prev || /opt/homebrew/bin/yabai -m space --focus last
+  /usr/local/bin/yabai -m space --focus prev || /usr/local/bin/yabai -m space --focus last
 else
-  /opt/homebrew/bin/yabai -m space --focus recent
+  /usr/local/bin/yabai -m space --focus recent
 fi
 
-/opt/homebrew/bin/yabai -m space "${current_space_index}" --destroy
+/usr/local/bin/yabai -m space "${current_space_index}" --destroy
 # spacebar -m config spaces on

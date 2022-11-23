@@ -875,7 +875,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus next || /opt/homebrew/bin/yabai -m space --focus first"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus next || /usr/local/bin/yabai -m space --focus first"
                                     }
                                 ],
                                 "type": "basic"
@@ -891,7 +891,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus prev || /opt/homebrew/bin/yabai -m space --focus last"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus prev || /usr/local/bin/yabai -m space --focus last"
                                     }
                                 ],
                                 "type": "basic"
@@ -907,7 +907,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus 1"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 1"
                                     }
                                 ],
                                 "type": "basic"
@@ -923,7 +923,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus 2"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 2"
                                     }
                                 ],
                                 "type": "basic"
@@ -939,7 +939,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus 3"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 3"
                                     }
                                 ],
                                 "type": "basic"
@@ -955,7 +955,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus 4"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 4"
                                     }
                                 ],
                                 "type": "basic"
@@ -971,7 +971,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus 5"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 5"
                                     }
                                 ],
                                 "type": "basic"
@@ -987,7 +987,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus 6"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 6"
                                     }
                                 ],
                                 "type": "basic"
@@ -1003,7 +1003,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus 7"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 7"
                                     }
                                 ],
                                 "type": "basic"
@@ -1019,7 +1019,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus 8"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 8"
                                     }
                                 ],
                                 "type": "basic"
@@ -1035,7 +1035,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus 9"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 9"
                                     }
                                 ],
                                 "type": "basic"
@@ -1051,7 +1051,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --focus 10"
+                                        "shell_command": "/usr/local/bin/yabai -m space --focus 10"
                                     }
                                 ],
                                 "type": "basic"
@@ -1072,7 +1072,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --focus west"
+                                        "shell_command": "/usr/local/bin/yabai -m window --focus west"
                                     }
                                 ],
                                 "type": "basic"
@@ -1088,7 +1088,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --focus south"
+                                        "shell_command": "/usr/local/bin/yabai -m window --focus south"
                                     }
                                 ],
                                 "type": "basic"
@@ -1104,7 +1104,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --focus north"
+                                        "shell_command": "/usr/local/bin/yabai -m window --focus north"
                                     }
                                 ],
                                 "type": "basic"
@@ -1120,7 +1120,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --focus east"
+                                        "shell_command": "/usr/local/bin/yabai -m window --focus east"
                                     }
                                 ],
                                 "type": "basic"
@@ -1142,7 +1142,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --swap west"
+                                        "shell_command": "/usr/local/bin/yabai -m window --swap west"
                                     }
                                 ],
                                 "type": "basic"
@@ -1159,7 +1159,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --swap south"
+                                        "shell_command": "/usr/local/bin/yabai -m window --swap south"
                                     }
                                 ],
                                 "type": "basic"
@@ -1176,7 +1176,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --swap north"
+                                        "shell_command": "/usr/local/bin/yabai -m window --swap north"
                                     }
                                 ],
                                 "type": "basic"
@@ -1193,7 +1193,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --swap east"
+                                        "shell_command": "/usr/local/bin/yabai -m window --swap east"
                                     }
                                 ],
                                 "type": "basic"
@@ -1214,7 +1214,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --swap west"
+                                        "shell_command": "/usr/local/bin/yabai -m window --swap west"
                                     }
                                 ],
                                 "type": "basic"
@@ -1230,7 +1230,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --mirror y-axis"
+                                        "shell_command": "/usr/local/bin/yabai -m space --mirror y-axis"
                                     }
                                 ],
                                 "type": "basic"
@@ -1294,7 +1294,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "(/opt/homebrew/bin/yabai -m window --space next && /opt/homebrew/bin/yabai -m space --focus next) || (/opt/homebrew/bin/yabai -m window --space first && /opt/homebrew/bin/yabai -m space --focus first)"
+                                        "shell_command": "(/usr/local/bin/yabai -m window --space next && /usr/local/bin/yabai -m space --focus next) || (/usr/local/bin/yabai -m window --space first && /usr/local/bin/yabai -m space --focus first)"
                                     }
                                 ],
                                 "type": "basic"
@@ -1311,163 +1311,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "(/opt/homebrew/bin/yabai -m window --space prev && /opt/homebrew/bin/yabai -m space --focus prev) || (/opt/homebrew/bin/yabai -m window --space last && /opt/homebrew/bin/yabai -m space --focus last)"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "; to option",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_alt"
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "semicolon"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "调整窗口大小 option + 方向键",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --resize left:-50:0; /opt/homebrew/bin/yabai -m window --resize right:-50:0"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "down_arrow",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --resize bottom:0:50; /opt/homebrew/bin/yabai -m window --resize top:0:50"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "up_arrow",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --resize top:0:-50; /opt/homebrew/bin/yabai -m window --resize bottom:0:-50"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --resize right:50:0; /opt/homebrew/bin/yabai -m window --resize left:50:0"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "浮动窗口左右贴边 shift option + 方向键",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_option",
-                                            "left_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --grid 1:2:0:0:1:1"
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_option",
-                                            "left_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --grid 1:2:1:0:1:1"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "重启yabai shift option + r",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_option",
-                                            "left_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/usr/bin/env osascript <<< \"display notification \\\"正在重启 Yabai\\\" with title \\\"Yabai\\\"\"; launchctl kickstart -k \"gui/${UID}/homebrew.mxcl.yabai\""
+                                        "shell_command": "(/usr/local/bin/yabai -m window --space prev && /usr/local/bin/yabai -m space --focus prev) || (/usr/local/bin/yabai -m window --space last && /usr/local/bin/yabai -m space --focus last)"
                                     }
                                 ],
                                 "type": "basic"
@@ -1513,71 +1357,6 @@
                         ]
                     },
                     {
-                        "description": "在父空间放大缩小 shift option + a",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_option",
-                                            "left_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --toggle zoom-parent"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "当桌面为空时关闭桌面option + x",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "x",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_option"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/bin/sh ~/.config/yabai/config/yabai/close_space_when_space_empty.sh"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "当桌面为不空时也关闭桌面option + x shift option + x",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "x",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "left_option",
-                                            "left_shift"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --destroy"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "窗口平衡/窗口最大化 shift option + d/s",
                         "manipulators": [
                             {
@@ -1592,7 +1371,7 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m space --balance"
+                                        "shell_command": "/usr/local/bin/yabai -m space --balance"
                                     }
                                 ],
                                 "type": "basic"
@@ -1609,7 +1388,224 @@
                                 },
                                 "to": [
                                     {
-                                        "shell_command": "/opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen || /opt/homebrew/bin/yabai -m window --grid 1:1:0:0:1:1"
+                                        "shell_command": "/usr/local/bin/yabai -m window --toggle zoom-fullscreen"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "调整窗口大小 option + 方向键",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --resize left:-50:0; /usr/local/bin/yabai -m window --resize right:-50:0"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "down_arrow",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --resize bottom:0:50; /usr/local/bin/yabai -m window --resize top:0:50"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "up_arrow",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --resize top:0:-50; /usr/local/bin/yabai -m window --resize bottom:0:-50"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --resize right:50:0; /usr/local/bin/yabai -m window --resize left:50:0"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "浮动窗口左右贴边 shift option + 方向键",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option",
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --grid 1:2:0:0:1:1"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option",
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --grid 1:2:1:0:1:1"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "重启yabai shift option + r",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option",
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/bin/env osascript <<< \"display notification \\\"正在重启 Yabai\\\" with title \\\"Yabai\\\"\"; launchctl kickstart -k \"gui/${UID}/homebrew.mxcl.yabai\""
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "在父空间放大缩小 shift option + a",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option",
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --toggle zoom-parent"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "切换窗口分割方式 shift option + m",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "m",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option",
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m window --toggle split"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "当桌面为空时关闭桌面option + w",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/bin/sh ~/.config/yabai/config/yabai/close_space_when_space_empty.sh"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "当桌面为不空时也关闭桌面 shift option + w",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option",
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "shell_command": "/usr/local/bin/yabai -m space --destroy"
                                     }
                                 ],
                                 "type": "basic"
