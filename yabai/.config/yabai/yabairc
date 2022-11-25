@@ -51,7 +51,7 @@ otherApp1='^(微力同步|Bob|自动切换输入法 专业版|百度网盘|Mos|�
 otherApp2='^(Thor Launcher|AltTab|提醒事项|关于本机|Karabiner-EventViewer|Karabiner-Elements|阿里钉|阿里郎)$'
 otherApp3='^(App Store|IINA|Xnip|Calendar|日历|System Preferences|系统偏好设置|Mail|微信|WeChatc|QQ|印象笔记)$'
 otherApp4='^(灵犀|网易云音乐|Alfred Preferences|Tencent Lemon|企业微信|Todoist|Input Source Pro|Spotify)$'
-otherApp5='^(Cleaner|钉钉会议|微信|iStat Menus)$'
+otherApp5='^(Cleaner|阿里会议|微信|iStat Menus)$'
 
 yabai -m rule --add app="${otherApp1}" manage=off
 yabai -m rule --add app="${otherApp2}" manage=off
