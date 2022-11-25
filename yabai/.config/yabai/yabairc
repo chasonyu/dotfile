@@ -61,9 +61,9 @@ yabai -m rule --add app="${otherApp5}" manage=off
 
 # yabai -m rule --add app="微信" sticky=on layer=above manage=off
 
-JetBrainsApp='^(IntelliJ IDEA|WebStorm|GoLand|Pycharm)$'
+JetBrainsApp='^(IntelliJ IDEA|WebStorm|GoLand|PyCharm)$'
 yabai -m rule --add app="${JetBrainsApp}" manage=off
-yabai -m rule --add app="${JetBrainsApp}" title=".*\[(.*)\].*" manage=on
+yabai -m rule --add app="${JetBrainsApp}" title="– …/" manage=on
 
 yabai -m config window_border                on
 yabai -m config window_border_placement      inset
