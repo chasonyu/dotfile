@@ -1,0 +1,26 @@
+{
+  "title": "other",
+  "rules": [
+    {
+      "description": "通过命令行切换输入法",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+                "mandatory": [
+                  "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "/bin/bash ~/.config/simplebar/scripts/toggle-input-source.sh"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

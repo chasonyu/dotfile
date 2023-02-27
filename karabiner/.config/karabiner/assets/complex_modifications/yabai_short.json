@@ -731,7 +731,7 @@
       ]
     },
     {
-      "description": "当桌面为不空时也关闭桌面 shift option + w",
+      "description": "关闭所有的空space shift option + w",
       "manipulators": [
         {
           "type": "basic",
@@ -746,7 +746,7 @@
           },
           "to": [
             {
-              "shell_command": "/usr/local/bin/yabai -m space --destroy"
+              "shell_command": "/bin/sh ~/.config/yabai/config/yabai/close_all_empty_space.sh"
             }
           ]
         }
