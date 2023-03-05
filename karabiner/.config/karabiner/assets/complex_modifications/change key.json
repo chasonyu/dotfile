@@ -23,6 +23,27 @@
       ]
     },
     {
+      "description": "ctrl+h to delete",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+                "mandatory": [
+                    "control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_forward"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "description": "ctrl+i to f12",
       "manipulators": [
         {

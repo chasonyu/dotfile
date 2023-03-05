@@ -6,13 +6,13 @@ map Y y$
 " 命令模式下按回车直接换行
 nmap <CR> i<CR><Esc>
 " 垂直分屏
-nmap <Leader>sv :vsp<CR>
+nmap <Leader>wv :vsp<CR>
 " 水平分屏
-nmap <Leader>sg :sp<CR>
+nmap <Leader>wg :sp<CR>
 " 退出所有的缓冲区
-nmap <Leader>sQ :qa<CR>
+nmap <Leader>wQ :qa<CR>
 " 退出
-nmap <Leader>sq :q<CR>
+nmap <Leader>wq :q<CR>
 " 取消高亮
 nmap <Leader><Space> :nohl<CR>
 " 在normal下快速开启新的一行
@@ -46,7 +46,7 @@ set hlsearch
 set incsearch
 "这两个用来配合搜索的时候输入小写时搜索会忽视大小写，输入驼峰时会大小写敏感
 set ignorecase
-set smartCase
+set smartcase
 
 " --------------------插件--------------------
 set easymotion
@@ -107,7 +107,7 @@ xmap <C-p> <Plug>RemoveOccurrence
 " easymotion配置
 map <leader>k <Plug>(easymotion-k)
 map <leader>j <Plug>(easymotion-j)
-map <leader>f <Plug>(easymotion-s)
+map <leader>s <Plug>(easymotion-s)
 " map <leader>E <Plug>(easymotion-F) 向后查找
 " map <leader>e <Plug>(easymotion-f) 向前查找
 " argtextobj配置
@@ -145,9 +145,13 @@ nnoremap <Leader>vc :action Vcs.QuickListPopupAction<CR>
 nnoremap <leader>ve :e ~/.ideavimrc<CR>
 nnoremap <leader>vs :source ~/.ideavimrc<CR>
 
+" 查找相关
+nnoremap <leader>fa :action GotoAction<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+
 
 nnoremap <leader>h :action HideAllWindows<CR>
-nnoremap <Space>q :action HideActiveWindow<CR>
+nnoremap <leader>q :action HideActiveWindow<CR>
 
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
@@ -160,8 +164,7 @@ nnoremap <leader>t :action ActivateTerminalToolWindow<CR>
 "nnoremap <leader>t :action TerminalOpenInTerminal<CR>
 "nnoremap <leader>kr :action IdeaVim.ReloadVimRc.reload<CR>
 nnoremap <leader>b :action ShowNavBar<CR>
-nnoremap <leader>s :action FileStructurePopup<CR>
-nnoremap <leader>a :action GotoAction<CR>
+"nnoremap <leader>s :action FileStructurePopup<CR>
 nnoremap <Space>o :action Move<CR>
 
 
@@ -175,4 +178,5 @@ nnoremap <Space>kh :action TypeHierarchy<CR>
 nnoremap gI :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap gt :action GotoTest<CR>
-nnoremap U :action FindUsages<CR>
+"nnoremap U :action FindUsages<CR>
+nnoremap cc :action CommentByLineComment<CR>

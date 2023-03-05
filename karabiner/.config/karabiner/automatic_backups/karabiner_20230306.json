@@ -1689,27 +1689,6 @@
                                 "type": "basic"
                             }
                         ]
-                    },
-                    {
-                        "description": "ctrl+h to delete",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": {
-                                        "mandatory": [
-                                            "control"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "delete_forward"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
                     }
                 ]
             },
