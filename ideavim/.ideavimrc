@@ -39,7 +39,7 @@ set nofoldenable
 " 关闭兼容vi
 set nocompatible
 " 搜索
-set hlsearch 
+set hlsearch
 "高亮搜索结果
 "实时增量显示搜索结果
 set incsearch
@@ -104,7 +104,7 @@ xmap <C-p> <Plug>RemoveOccurrence
 " nmap <C-S-n> <Plug>AllWholeOccurrences
 " xmap <C-S-n> <Plug>AllWholeOccurrences
 " easymotion配置
-map <leader>k <Plug>(easymotion-k)
+map gg <Plug>(easymotion-k)
 map <leader>j <Plug>(easymotion-j)
 map <leader>s <Plug>(easymotion-s)
 " map <leader>E <Plug>(easymotion-F) 向后查找
@@ -116,51 +116,57 @@ set timeoutlen=5000
 " 切换输入法配置
 :set keep-english-in-normal-and-restore-in-insert
 
-"" --------------------idea映射--------------------
-"" Tab相关
-"noremap H :action PreviousTab<CR>
-"noremap L :action NextTab<CR>
-"" 运行相关
-"nnoremap <leader>rg :action ChooseRunConfiguration<CR>
-"nnoremap <Leader>rr :action Run<CR>
-"nnoremap <Leader>rc :action RunClass<CR>
-"nnoremap <Leader>rj :action JRebel Run<CR>
-"nnoremap <Leader>rn :action ContextRun<CR>
-"nnoremap <Leader>ra :action RunAnything<CR>
-"" Debug相关
-"nnoremap <leader>dg :action ChooseDebugConfiguration<CR>
-"nnoremap <Leader>dd :action Debug<CR>
-"nnoremap <Leader>dc :action DebugClass<CR>
-"nnoremap <Leader>dj :action JRebel Debug<CR>
-"nnoremap <Leader>rk :action Stop<CR>
-"" 重构相关
-"" c-, c-.用于找到上、下一个相同内容
-"nnoremap <Leader>R :action RenameElement<CR>
-"nnoremap <c-r> :action RenameElement<CR>
-"" Git相关
-"nnoremap <Leader>vl :action Git.Pull<CR>
-"nnoremap <Leader>vc :action Vcs.QuickListPopupAction<CR>
-"" navigation
-"nnoremap gi :action GotoImplementation<CR>
-"nnoremap gs :action GotoSuperMethod<CR>
-"nnoremap gt :action GotoTest<CR>
-"nnoremap gd :action GotoDeclaration<CR>
-"vnoremap gd :action GotoDeclaration<CR>
-"nnoremap gu :action FindUsages<CR>
-"nnoremap gU :action ShowUsages<CR>
-"" vimrc相关 刷新用command+shif+i
-"nnoremap <leader>ve :e ~/.ideavimrc<CR>
-"nnoremap <leader>vs :source ~/.ideavimrc<CR>
-"" 查找相关
-"nnoremap <leader>fa :action GotoAction<CR>
-"nnoremap <leader>ff :action GotoFile<CR>
-"nnoremap <leader>fo :action GotoClass<CR>
-"" 窗口
-"nnoremap <leader>h :action HideAllWindows<CR>
-"nnoremap <leader>q :action HideActiveWindow<CR>
-"
-"nnoremap [[ :action MethodUp<CR>
-"nnoremap ]] :action MethodDown<CR>
+" --------------------idea映射--------------------
+" Tab相关
+noremap H :action PreviousTab<CR>
+noremap L :action NextTab<CR>
+" 运行相关
+nnoremap <leader>rg :action ChooseRunConfiguration<CR>
+nnoremap <Leader>rr :action Run<CR>
+nnoremap <Leader>rc :action RunClass<CR>
+nnoremap <Leader>rj :action JRebel Run<CR>
+nnoremap <Leader>rn :action ContextRun<CR>
+nnoremap <Leader>ra :action RunAnything<CR>
+nnoremap <Leader>rk :action Stop<CR>
+" Debug相关
+nnoremap <leader>dg :action ChooseDebugConfiguration<CR>
+nnoremap <Leader>dd :action Debug<CR>
+nnoremap <Leader>dc :action DebugClass<CR>
+nnoremap <Leader>dj :action JRebel Debug<CR>
+" 重构相关
+" c-, c-.用于找到上、下一个相同内容
+nnoremap <Leader>R :action RenameElement<CR>
+nnoremap <c-r> :action RenameElement<CR>
+noremap <Leader>rsw :action SurroundWith<CR>
+nnoremap <Leader>mi :action ImplementMethods<CR>
+nnoremap <Leader>mo :action OverrideMethods<CR>
+" Git相关
+nnoremap <Leader>vl :action Git.Pull<CR>
+nnoremap <Leader>vc :action Vcs.QuickListPopupAction<CR>
+" navigation
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action GotoSuperMethod<CR>
+nnoremap gt :action GotoTest<CR>
+nnoremap gd :action GotoDeclaration<CR>
+vnoremap gd :action GotoDeclaration<CR>
+nnoremap gu :action FindUsages<CR>
+nnoremap gU :action ShowUsages<CR>
+nnoremap ga :action Annotate<CR>
+nnoremap g; :action JumpToLastChange<CR>
+nnoremap g, :action JumpToNextChange<CR>
+" vimrc相关 刷新用command+shif+i
+nnoremap <leader>ve :e ~/.ideavimrc<CR>
+nnoremap <leader>vs :source ~/.ideavimrc<CR>
+" 查找相关
+nnoremap <leader>fa :action GotoAction<CR>
+nnoremap <leader>ff :action GotoFile<CR>
+nnoremap <leader>fo :action GotoClass<CR>
+" 窗口
+nnoremap <leader>h :action HideAllWindows<CR>
+nnoremap <leader>q :action HideActiveWindow<CR>
+
+nnoremap [[ :action MethodUp<CR>
+nnoremap ]] :action MethodDown<CR>
 "
 "inoremap <c-l> <Esc>:action EditorCompleteStatement<CR>
 "nnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
@@ -188,105 +194,98 @@ set timeoutlen=5000
 "nnoremap <Space>v :action IntroduceVariable<CR>
 "vnoremap <Space>v :action IntroduceVariable<CR>
 "nnoremap <Space>i :action ShowIntentionActions<CR>
-"nnoremap <c-i> :action ShowIntentionActions<CR>
 
 """"""""""""""""""""""""""""""""""""""effective""""""""""""""""""""""""""""""""
-nnoremap <Leader>sw :action SurroundWith<CR>
-nnoremap <Leader>oi :action OptimizeImports<CR>
-nnoremap <Leader>tz :action ToggleZenMode<CR>
-nnoremap <leader>ns :action NewScratchFile<CR>
-nnoremap <Leader>ic :action InspectCode<CR>
-
-""""""""""""""""""""""""""""""""""""""Window""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""Fix""""""""""""""""""""""""""""""""
-nnoremap <Leader>fd :action FixDocComment<CR>
-""""""""""""""""""""""""""""""""""""""Vcs""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""Generate""""""""""""""""""""""""""""""""
-nnoremap <Leader>im :action ImplementMethods<CR>
-nnoremap <Leader>om :action OverrideMethods<CR>
-nnoremap <Leader>nc :action NewClass<CR>
-""""""""""""""""""""""""""""""""""""""Debug""""""""""""""""""""""""""""""""
-nnoremap <leader>tb :action ToggleLineBreakpoint<CR>
-nnoremap <Leader>vb :action ViewBreakpoints<CR>
-""""""""""""""""""""""""""""""""""""""Start and stop""""""""""""""""""""""""""""""""
-""""""""""""""""""""""""""""""""""""""Show""""""""""""""""""""""""""""""""
-nnoremap <Leader>sd :action ShowUmlDiagram<CR>
-nnoremap <Leader>mh :action MethodHierarchy<CR>
-nnoremap <Leader>sp :action ShowFilePath<CR>
-nnoremap <Leader>se :action ShowErrorDescription<CR>
-nnoremap <Leader>pm :action ShowPopupMenu<CR>
-nnoremap <Leader>jd :action QuickJavaDoc<CR>
-nnoremap <leader>a :action Annotate<CR>
-nnoremap <leader>sn :action ShowNavBar<CR>
-""""""""""""""""""""""""""""""""""""""Search""""""""""""""""""""""""""""""""
-map <leader>z <Action>(ToggleDistractionFreeMode)
-map <leader>s <Action>(SelectInProjectView)
-map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
-" intellij built in key map
-
-nnoremap <leader>gc :action Git.CompareWithBranch<CR>
-nnoremap <leader>ga :action Annotate<CR>
-nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
-
-" build and compile code
-nnoremap <leader>mr :action Maven.Reimport<CR>
-
-" run and debug
-nnoremap ,c :action CompileDirty<CR>
-
-" navigation
-nnoremap gb :action JumpToLastChange<CR>
-
-" code actions
-nnoremap -- :action OptimizeImports<CR>
-
-
-""""""""""""""""""""""""""""""""""""""Refactoring""""""""""""""""""""""""""""""""""""""
-
-noremap <Space>ms :action MakeStatic<CR>
-noremap <Space>ci :action ConvertToInstanceMethod<CR>
-noremap <Space>ei :action ExtractInterface<CR>
-noremap <Space>ef :action EncapsulateFields<CR>
-noremap <Space>rmo :action ReplaceMethodWithMethodObject<CR>
-noremap <Space>iv :action IntroduceVariable<CR>
-noremap <Space>ic :action IntroduceConstant<CR>
-noremap <Space>ip :action IntroduceParameter<CR>
-noremap <Space>if :action IntroduceField<CR>
-noremap <Space>po :action IntroduceParameterObject<CR>
-noremap <Space>pd :action MemberPushDown<CR>
-noremap <Space>pu :action MembersPullUp<CR>
-noremap <Space>RF :action RenameFile<CR>
-noremap <Space>cs  :action ChangeSignature<CR>
-noremap <Space>ai :action AnonymousToInner<CR>
-""""""""""""""""""""""""""""""""""""""Jump articles""""""""""""""""""""""""""""""""""""""
-noremap <Space>te :action SearchEverywhere<CR>
-nnoremap <Space>ts mm`m:action GotoSymbol<CR>
-noremap  <Space>tu  mm`m:action Toolkit.GotoService<CR>
-noremap <Space>g, mm`m:action JumpToLastChange<CR>
-noremap <Space>g; mm`m:action JumpToNextChange<CR>
-noremap <Space>rf :action RecentFiles<CR>
-noremap <Space>rF :action RecentChangedFiles<CR>
-""""""""""""""""""""""""""""""""""""""SQL""""""""""""""""""""""""""""""""""""""
-noremap <Space>sc :action Console.Transaction.Commit<CR>
-noremap <Space>sr :action Console.Transaction.Rollback<CR>
-noremap <Space>se :action Console.Jdbc.Execute<CR>
-"Open the database log window, provided the MyBatis Log Plugin is installed
-noremap <Space>AL :action TailMyBatisLog0<CR>:action ActivateMyBatisLogToolWindow<CR>
-""""""""""""""""""""""""""""""""""""""Debug""""""""""""""""""""""""""""""""""""""
-noremap <Space>bp :action ToggleLineBreakpoint<CR>
-noremap <Space>qe :action QuickEvaluateExpression <CR>
-noremap <Space>ee :action EvaluateExpression <CR>
-noremap <Space>fr :action Debugger.ForceEarlyReturn<CR>
-noremap <Space>daw :action Debugger.AddToWatch<CR>
-noremap <Space>fc :action ForceRunToCursor<CR>
-noremap <Space>hs :action Hotswap<CR>
-noremap <Space>DD :action JRebel Debug<CR>
-noremap <Space>rab :action Debugger.RemoveAllBreakpointsInFile<CR>
-noremap <Space>raB :action Debugger.RemoveAllBreakpoints<CR>
-noremap <Space>df :action Debugger.PopFrame<CR>
-noremap <Space>pp :action ShowExecutionPoint<CR>
-noremap <Space>ds :action StreamTracerAction<CR>
-noremap <Space>mb :action XDebugger.MuteBreakpoints<CR>
+"nnoremap <Leader>oi :action OptimizeImports<CR>
+"nnoremap <Leader>tz :action ToggleZenMode<CR>
+"nnoremap <leader>ns :action NewScratchFile<CR>
+"nnoremap <Leader>ic :action InspectCode<CR>
+"
+"""""""""""""""""""""""""""""""""""""""Window""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""Fix""""""""""""""""""""""""""""""""
+"nnoremap <Leader>fd :action FixDocComment<CR>
+"""""""""""""""""""""""""""""""""""""""Vcs""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""Generate""""""""""""""""""""""""""""""""
+"nnoremap <Leader>nc :action NewClass<CR>
+"""""""""""""""""""""""""""""""""""""""Debug""""""""""""""""""""""""""""""""
+"nnoremap <leader>tb :action ToggleLineBreakpoint<CR>
+"nnoremap <Leader>vb :action ViewBreakpoints<CR>
+"""""""""""""""""""""""""""""""""""""""Start and stop""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""Show""""""""""""""""""""""""""""""""
+"nnoremap <Leader>sd :action ShowUmlDiagram<CR>
+"nnoremap <Leader>mh :action MethodHierarchy<CR>
+"nnoremap <Leader>sp :action ShowFilePath<CR>
+"nnoremap <Leader>se :action ShowErrorDescription<CR>
+"nnoremap <Leader>pm :action ShowPopupMenu<CR>
+"nnoremap <Leader>jd :action QuickJavaDoc<CR>
+"nnoremap <leader>sn :action ShowNavBar<CR>
+"""""""""""""""""""""""""""""""""""""""Search""""""""""""""""""""""""""""""""
+"map <leader>z <Action>(ToggleDistractionFreeMode)
+"map <leader>s <Action>(SelectInProjectView)
+"map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+"" intellij built in key map
+"
+"nnoremap <leader>gc :action Git.CompareWithBranch<CR>
+"nnoremap <leader>ga :action Annotate<CR>
+"nnoremap <leader>gh :action Vcs.ShowTabbedFileHistory<CR>
+"
+"" build and compile code
+"nnoremap <leader>mr :action Maven.Reimport<CR>
+"
+"" run and debug
+"nnoremap ,c :action CompileDirty<CR>
+"
+"" navigation
+"
+"" code actions
+"nnoremap -- :action OptimizeImports<CR>
+"
+"
+"""""""""""""""""""""""""""""""""""""""Refactoring""""""""""""""""""""""""""""""""""""""
+"
+"noremap <Space>ms :action MakeStatic<CR>
+"noremap <Space>ci :action ConvertToInstanceMethod<CR>
+"noremap <Space>ei :action ExtractInterface<CR>
+"noremap <Space>ef :action EncapsulateFields<CR>
+"noremap <Space>rmo :action ReplaceMethodWithMethodObject<CR>
+"noremap <Space>iv :action IntroduceVariable<CR>
+"noremap <Space>ic :action IntroduceConstant<CR>
+"noremap <Space>ip :action IntroduceParameter<CR>
+"noremap <Space>if :action IntroduceField<CR>
+"noremap <Space>po :action IntroduceParameterObject<CR>
+"noremap <Space>pd :action MemberPushDown<CR>
+"noremap <Space>pu :action MembersPullUp<CR>
+"noremap <Space>RF :action RenameFile<CR>
+"noremap <Space>cs  :action ChangeSignature<CR>
+"noremap <Space>ai :action AnonymousToInner<CR>
+"""""""""""""""""""""""""""""""""""""""Jump articles""""""""""""""""""""""""""""""""""""""
+"noremap <Space>te :action SearchEverywhere<CR>
+"nnoremap <Space>ts mm`m:action GotoSymbol<CR>
+"noremap  <Space>tu  mm`m:action Toolkit.GotoService<CR>
+"noremap <Space>g, mm`m:action JumpToLastChange<CR>
+"noremap <Space>g; mm`m:action JumpToNextChange<CR>
+"noremap <Space>rf :action RecentFiles<CR>
+"noremap <Space>rF :action RecentChangedFiles<CR>
+"""""""""""""""""""""""""""""""""""""""SQL""""""""""""""""""""""""""""""""""""""
+"noremap <Space>sc :action Console.Transaction.Commit<CR>
+"noremap <Space>sr :action Console.Transaction.Rollback<CR>
+"noremap <Space>se :action Console.Jdbc.Execute<CR>
+""Open the database log window, provided the MyBatis Log Plugin is installed
+"noremap <Space>AL :action TailMyBatisLog0<CR>:action ActivateMyBatisLogToolWindow<CR>
+"""""""""""""""""""""""""""""""""""""""Debug""""""""""""""""""""""""""""""""""""""
+"noremap <Space>bp :action ToggleLineBreakpoint<CR>
+"noremap <Space>qe :action QuickEvaluateExpression <CR>
+"noremap <Space>ee :action EvaluateExpression <CR>
+"noremap <Space>fr :action Debugger.ForceEarlyReturn<CR>
+"noremap <Space>daw :action Debugger.AddToWatch<CR>
+"noremap <Space>fc :action ForceRunToCursor<CR>
+"noremap <Space>hs :action Hotswap<CR>
+"noremap <Space>rab :action Debugger.RemoveAllBreakpointsInFile<CR>
+"noremap <Space>raB :action Debugger.RemoveAllBreakpoints<CR>
+"noremap <Space>df :action Debugger.PopFrame<CR>
+"noremap <Space>pp :action ShowExecutionPoint<CR>
+"noremap <Space>ds :action StreamTracerAction<CR>
+"noremap <Space>mb :action XDebugger.MuteBreakpoints<CR>
 
 
 """""""""""""""""""""""""""""""""""""""Window""""""""""""""""""""""""""""""""""""""
@@ -319,9 +318,6 @@ noremap <Space>mb :action XDebugger.MuteBreakpoints<CR>
 "noremap <Space>ss  :action ShowSettings<CR>
 "noremap <Space>ps :action ShowProjectStructureSettings<CR>
 """""""""""""""""""""""""""""""""""""""Utilities""""""""""""""""""""""""""""""""
-"noremap <Space>sw :action SurroundWith<CR>
-"noremap <Space>= :action ReformatCode<CR>
-"noremap <Space>sm :action ShowPopupMenu<CR>
 "noremap <Space>st :action SaveAsTemplate<CR>
 "noremap <Space>cap   :action CopyAbsolutePath<CR>
 "noremap <Space>ccp   :action CopyContentRootPath<CR>
@@ -339,12 +335,7 @@ noremap <Space>mb :action XDebugger.MuteBreakpoints<CR>
 "noremap <Space>dE :action SafeDelete<CR>
 "nnoremap <Space>cp :action CheckinProject<CR>
 "nnoremap <CR><CR> :action ShowIntentionActions<CR>
-"noremap <Space>nc :action NewClass<CR>
 "noremap <Space>ps :action ShowProjectStructureSettings<CR>
 "noremap <Space>ri :action RevealIn<CR>
 "noremap <Space>ga :action Generate<CR>
 "noremap <Space>cu :action CloseAllUnmodifiedEditors<CR>
-"noremap <Space>oc :action OpenCodotaSearch<CR>
-"noremap <Space>AC :action ActivateCodotaToolWindow<CR>
-""Codota activation window, Codota plug-in needs to be installed in advance
-"noremap <Space>cl :action CodotaLeanSearchCrossRefAction<CR>
