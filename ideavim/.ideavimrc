@@ -104,9 +104,9 @@ xmap <C-p> <Plug>RemoveOccurrence
 " nmap <C-S-n> <Plug>AllWholeOccurrences
 " xmap <C-S-n> <Plug>AllWholeOccurrences
 " easymotion配置
-map gg <Plug>(easymotion-k)
+map <leader>k <Plug>(easymotion-k)
 map <leader>j <Plug>(easymotion-j)
-map <leader>s <Plug>(easymotion-s)
+map m <Plug>(easymotion-s)
 " map <leader>E <Plug>(easymotion-F) 向后查找
 " map <leader>e <Plug>(easymotion-f) 向前查找
 " argtextobj配置
@@ -152,6 +152,7 @@ vnoremap gd :action GotoDeclaration<CR>
 nnoremap gu :action FindUsages<CR>
 nnoremap gU :action ShowUsages<CR>
 nnoremap ga :action Annotate<CR>
+nnoremap gl :action SelectInProjectView<CR>
 nnoremap g; :action JumpToLastChange<CR>
 nnoremap g, :action JumpToNextChange<CR>
 " vimrc相关 刷新用command+shif+i
@@ -167,6 +168,7 @@ nnoremap <leader>q :action HideActiveWindow<CR>
 
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
+map <leader>e :action SelectInProjectView<CR>
 "
 "inoremap <c-l> <Esc>:action EditorCompleteStatement<CR>
 "nnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
