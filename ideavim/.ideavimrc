@@ -51,7 +51,7 @@ set smartcase
 set easymotion
 set NERDTree
 " s S 查找全文
-set sneak
+" set sneak
 " 成双成对编辑 ys cs ds
 set surround
 " J 智能连接
@@ -104,9 +104,9 @@ xmap <C-p> <Plug>RemoveOccurrence
 " nmap <C-S-n> <Plug>AllWholeOccurrences
 " xmap <C-S-n> <Plug>AllWholeOccurrences
 " easymotion配置
-map <leader>k <Plug>(easymotion-k)
-map <leader>j <Plug>(easymotion-j)
-map m <Plug>(easymotion-s)
+map <leader>l <Plug>(easymotion-bd-jk)
+map s <Plug>(easymotion-s)
+map S :action AceDeclarationAction<CR>
 " map <leader>E <Plug>(easymotion-F) 向后查找
 " map <leader>e <Plug>(easymotion-f) 向前查找
 " argtextobj配置

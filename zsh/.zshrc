@@ -28,6 +28,15 @@ alias vim='nvim'
 alias vi='nvim'
 alias zshconfig="vim ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
+alias cat='ccat'
+alias jdk8='jenv global 1.8'
+alias jdk17='jenv global 17.0'
+alias jdk11='jenv global 11.0'
+alias jdk8_tmp='jenv local 1.8'
+alias jdk17_tmp='jenv local 17.0'
+alias jdk11_tmp='jenv local 11.0'
+alias yabai-stop='brew services stop yabai'
+alias yabai-start='brew services start yabai'
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
@@ -50,4 +59,4 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.aliyun.com/homebrew/homebrew-bottles
+
