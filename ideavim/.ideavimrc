@@ -14,14 +14,18 @@ nmap <Leader>wQ :qa<CR>
 " 退出
 nmap <Leader>wq :q<CR>
 " 取消高亮
-nmap <Leader><Space> :nohl<CR>
+map <Esc> <Esc>:noh<CR>
+"nmap <Leader><Space> :nohl<CR>
 " 在normal下快速开启新的一行
 nmap <Leader>o o<Esc>
 " 在normal下快速开启新的一行(当前行上面)
 nmap <leader>O O<Esc>
 " ctrl+hjkl切换分屏的窗口
-nmap <BackSpace> <c-w>h
-nmap <Delete> <c-w>l
+"nmap <BackSpace> <c-w>h
+"nmap <Delete> <c-w>l
+nmap <leader>; A;<Esc>
+nmap <leader>a A
+nmap <leader>{ A{}<Esc>i<CR>
 
 " -----------------基本配置------------------
 "vim使用系统剪切板
@@ -46,6 +50,7 @@ set incsearch
 "这两个用来配合搜索的时候输入小写时搜索会忽视大小写，输入驼峰时会大小写敏感
 set ignorecase
 set smartcase
+set relativenumber
 
 " --------------------插件--------------------
 set easymotion
@@ -143,18 +148,24 @@ nnoremap <Leader>mo :action OverrideMethods<CR>
 " Git相关
 nnoremap <Leader>vl :action Git.Pull<CR>
 nnoremap <Leader>vc :action Vcs.QuickListPopupAction<CR>
+nnoremap <Leader>vu :action Vcs.RollbackChangedLines<CR>
+
 " navigation
 nnoremap gi :action GotoImplementation<CR>
 nnoremap gs :action GotoSuperMethod<CR>
 nnoremap gt :action GotoTest<CR>
 nnoremap gd :action GotoDeclaration<CR>
 vnoremap gd :action GotoDeclaration<CR>
-nnoremap gu :action FindUsages<CR>
-nnoremap gU :action ShowUsages<CR>
+nnoremap gU :action FindUsages<CR>
+nnoremap gu :action ShowUsages<CR>
 nnoremap ga :action Annotate<CR>
 nnoremap gl :action SelectInProjectView<CR>
-nnoremap g; :action JumpToLastChange<CR>
-nnoremap g, :action JumpToNextChange<CR>
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap gh :action ShowErrorDescription<CR>
+nnoremap gw *
+"nnoremap g; :action JumpToLastChange<CR>
+"nnoremap g, :action JumpToNextChange<CR>
 " vimrc相关 刷新用command+shif+i
 nnoremap <leader>ve :e ~/.ideavimrc<CR>
 nnoremap <leader>vs :source ~/.ideavimrc<CR>
@@ -163,12 +174,17 @@ nnoremap <leader>fa :action GotoAction<CR>
 nnoremap <leader>ff :action GotoFile<CR>
 nnoremap <leader>fo :action GotoClass<CR>
 " 窗口
-nnoremap <leader>h :action HideAllWindows<CR>
+nnoremap <leader>h :action HideAllWindows<CR> :action ActivateProjectToolWindow<CR> :action EditorEscape<CR>
 nnoremap <leader>q :action HideActiveWindow<CR>
 
 nnoremap [[ :action MethodUp<CR>
 nnoremap ]] :action MethodDown<CR>
 map <leader>e :action SelectInProjectView<CR>
+
+" 展开收缩代码
+nnoremap <leader>- :action CollapseRegion<CR>
+nnoremap <leader>= :action ExpandRegion<CR>
+
 "
 "inoremap <c-l> <Esc>:action EditorCompleteStatement<CR>
 "nnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>

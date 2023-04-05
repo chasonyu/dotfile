@@ -51,7 +51,7 @@ otherApp1='^(微力同步|Bob|自动切换输入法 专业版|百度网盘|Mos|�
 otherApp2='^(Thor Launcher|AltTab|提醒事项|关于本机|Karabiner-EventViewer|Karabiner-Elements|阿里钉|阿里郎)$'
 otherApp3='^(App Store|IINA|Xnip|Calendar|日历|System Preferences|系统偏好设置|Mail|微信|WeChatc|QQ|印象笔记)$'
 otherApp4='^(灵犀|网易云音乐|Alfred Preferences|Tencent Lemon|企业微信|Todoist|Input Source Pro|Spotify)$'
-otherApp5='^(Cleaner|阿里会议|钉钉会议|微信|iStat Menus|腾讯会议|uPic|Telegram|He3)$'
+otherApp5='^(Cleaner|阿里会议|钉钉会议|微信|iStat Menus|腾讯会议|uPic|Telegram|He3|系统设置)$'
 
 yabai -m rule --add app="${otherApp1}" manage=off
 yabai -m rule --add app="${otherApp2}" manage=off
@@ -61,13 +61,20 @@ yabai -m rule --add app="${otherApp5}" manage=off
 
 # yabai -m rule --add app="微信" sticky=on layer=above manage=off
 
-JetBrainsApp='^(IntelliJ IDEA|WebStorm|GoLand|PyCharm)$'
+JetBrainsApp='^(IntelliJ IDEA|WebStorm|GoLand|PyCharm|CLion)$'
 # yabai -m rule --add app="${JetBrainsApp}" manage=off
 # JetBrainsAppTitle='(Preferences|Fields to|Generate|Select Methods|Create|Git|New File|Wildcard|Configurations|Push Commits|New Project)'
 # yabai -m rule --add app="${JetBrainsApp}" title="${JetBrainsAppTitle}" manage=off
 
+# yabai -m rule --add app="${JetBrainsApp}" manage=off
+# # yabai -m rule --add app="${JetBrainsApp}" title="( – )"  manage=on
+# yabai -m signal --add event=window_created app="${JetBrainsApp}" action='/usr/bin/env python3 /Users/chason/dotfile/yabai/.config/yabai/config/yabai/jetbrain.py'
+
+# /usr/bin/env python3 /Users/chason/dotfile/yabai/.config/yabai/config/yabai/jetbrain.py
+
 yabai -m rule --add app="${JetBrainsApp}" manage=off
-yabai -m rule --add app="${JetBrainsApp}" title="( – )"  manage=on
+yabai -m rule --add app="${JetBrainsApp}" title=".*\[.*\].*" manage=on 
+yabai -m rule --add app="${JetBrainsApp}" title="^$"  manage=on
 
 yabai -m config window_border                on
 yabai -m config window_border_placement      inset
@@ -84,5 +91,3 @@ yabai -m config insert_feedback_color   0xffd75f5f
 
 
 echo "yabai configuration loaded.."
-
-

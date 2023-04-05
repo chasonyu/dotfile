@@ -13,17 +13,18 @@ plugins=(
     zsh-completions
     zsh-autosuggestions
     zsh-syntax-highlighting
-    zsh-history-substring-search
+#    zsh-history-substring-search
 )
 
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 source $ZSH/oh-my-zsh.sh
 
 # 快捷键绑定
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
+# bindkey "$terminfo[kcuu1]" history-substring-search-up
+# bindkey "$terminfo[kcud1]" history-substring-search-down
 
 # 别名
+alias v='nvim'
 alias vim='nvim'
 alias vi='nvim'
 alias zshconfig="vim ~/.zshrc"
@@ -37,6 +38,7 @@ alias jdk17_tmp='jenv local 17.0'
 alias jdk11_tmp='jenv local 11.0'
 alias yabai-stop='brew services stop yabai'
 alias yabai-start='brew services start yabai'
+alias rc='ranger'
 
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
@@ -60,3 +62,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 
+export RANGER_LOAD_DEFAULT_RC=false
