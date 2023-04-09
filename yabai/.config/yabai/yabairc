@@ -61,7 +61,7 @@ yabai -m rule --add app="${otherApp5}" manage=off
 
 # yabai -m rule --add app="微信" sticky=on layer=above manage=off
 
-JetBrainsApp='^(IntelliJ IDEA|WebStorm|GoLand|PyCharm|CLion)$'
+JetBrainsApp='^(IntelliJ IDEA|WebStorm|GoLand|PyCharm|CLion|Android Studio)$'
 # yabai -m rule --add app="${JetBrainsApp}" manage=off
 # JetBrainsAppTitle='(Preferences|Fields to|Generate|Select Methods|Create|Git|New File|Wildcard|Configurations|Push Commits|New Project)'
 # yabai -m rule --add app="${JetBrainsApp}" title="${JetBrainsAppTitle}" manage=off

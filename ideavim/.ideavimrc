@@ -26,6 +26,15 @@ nmap <leader>O O<Esc>
 nmap <leader>; A;<Esc>
 nmap <leader>a A
 nmap <leader>{ A{}<Esc>i<CR>
+vnoremap J 5j
+vnoremap K 5k
+nnoremap J 5j
+nnoremap K 5k
+nnoremap <leader>j J
+vnoremap H ^
+vnoremap L g_
+nnoremap H ^
+nnoremap L g_
 
 " -----------------基本配置------------------
 "vim使用系统剪切板
@@ -50,7 +59,7 @@ set incsearch
 "这两个用来配合搜索的时候输入小写时搜索会忽视大小写，输入驼峰时会大小写敏感
 set ignorecase
 set smartcase
-set relativenumber
+"set relativenumber
 
 " --------------------插件--------------------
 set easymotion
@@ -123,8 +132,8 @@ set timeoutlen=5000
 
 " --------------------idea映射--------------------
 " Tab相关
-noremap H :action PreviousTab<CR>
-noremap L :action NextTab<CR>
+noremap <A-H> :action PreviousTab<CR>
+noremap <A-L> :action NextTab<CR>
 " 运行相关
 nnoremap <leader>rg :action ChooseRunConfiguration<CR>
 nnoremap <Leader>rr :action Run<CR>
@@ -147,6 +156,7 @@ nnoremap <Leader>mi :action ImplementMethods<CR>
 nnoremap <Leader>mo :action OverrideMethods<CR>
 " Git相关
 nnoremap <Leader>vl :action Git.Pull<CR>
+nnoremap <Leader>vp :action Vcs.Push<CR>
 nnoremap <Leader>vc :action Vcs.QuickListPopupAction<CR>
 nnoremap <Leader>vu :action Vcs.RollbackChangedLines<CR>
 
@@ -184,7 +194,6 @@ map <leader>e :action SelectInProjectView<CR>
 " 展开收缩代码
 nnoremap <leader>- :action CollapseRegion<CR>
 nnoremap <leader>= :action ExpandRegion<CR>
-
 "
 "inoremap <c-l> <Esc>:action EditorCompleteStatement<CR>
 "nnoremap <Space>t :action Refactorings.QuickListPopupAction<CR>
