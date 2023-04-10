@@ -35,6 +35,8 @@ vnoremap H ^
 vnoremap L g_
 nnoremap H ^
 nnoremap L g_
+onoremap H ^
+onoremap L g_
 nnoremap <leader>u ~
 
 " -----------------基本配置------------------
@@ -117,8 +119,8 @@ xmap <C-p> <Plug>RemoveOccurrence
 " xmap <C-S-n> <Plug>AllWholeOccurrences
 " easymotion配置
 map <leader>l <Plug>(easymotion-bd-jk)
-map gj <Plug>(easymotion-j)
-map gk <Plug>(easymotion-k)
+" map gj <Plug>(easymotion-j)
+" map gk <Plug>(easymotion-k)
 map s <Plug>(easymotion-s)
 map S :action AceDeclarationAction<CR>
 
