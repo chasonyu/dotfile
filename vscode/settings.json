@@ -205,7 +205,7 @@
     {
       "before": [
         "<Leader>",
-         highlig"
+        "u"
       ],
       "after": [
         "~"
