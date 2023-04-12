@@ -1,15 +1,27 @@
 {
   // editor settings
-  "editor.fontFamily": "JetBrains Mono, Monaco, 'Courier New', monospace",
+  "editor.fontFamily": "JetBrains Mono, Menlo",
   "editor.fontLigatures": false,
   "editor.fontSize": 12.5,
   "editor.fontVariations": false,
   "editor.fontWeight": "700",
+  "editor.lineHeight": 1.45,
   "editor.mouseWheelScrollSensitivity": 0.5,
+  "explorer.scr"
   "editor.formatOnSave": false,
   "editor.unicodeHighlight.allowedLocales": {
     "zh-hans": true,
     "zh-hant": true
+  },
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
   },
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.cursorBlinking": "smooth",
@@ -17,24 +29,27 @@
   "security.workspace.trust.untrustedFiles": "open",
   "files.autoSave": "afterDelay",
   "window.autoDetectColorScheme": true,
-  "workbench.colorTheme": "Quiet Light",
   "workbench.preferredDarkColorTheme": "Tokyo Storm AltSynt",
-  "workbench.preferredLightColorTheme": "Quiet Light",
+  "workbench.preferredLightColorTheme": "Eva Light Italic",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.indent": 16,
   "workbench.colorCustomizations": {
+    "editor.background": "#f2f3f7",
     "list.errorForeground": "#d72834",
     "list.warningForeground": "#fa9b2f",
     "gitDecoration.modifiedResourceForeground": "#386fd6",
     "gitDecoration.untrackedResourceForeground": "#c26c6c",
     "gitDecoration.deletedResourceForeground": "#a19e9e",
-    "statusBar.background": "#ba9bf8",
-    "statusBar.noFolderBackground": "#ba9bf8",
-    "statusBar.debuggingBackground": "#ba9bf8",
+    "statusBar.background": "#8aa9f9",
+    "statusBar.noFolderBackground": "#8aa9f9",
+    "statusBar.debuggingBackground": "#8aa9f9",
     "statusBar.foreground": "#434C5E",
     "statusBar.debuggingForeground": "#434C5E"
   },
   "workbench.tree.renderIndentGuides": "always",
+  "workbench.list.mouseWheelScrollSensitivity":0.5,
+  "workbench.list.fastScrollSensitivity":5,
+
   "tabnine.experimentalAutoImports": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "[python]": {
@@ -160,6 +175,27 @@
         ":nohl"
       ]
     },
+    // 窗口管理
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "s"
+      ],
+      "commands": [
+        ":sp"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "w",
+        "v"
+      ],
+      "commands": [
+        ":vsp"
+      ]
+    },
     // 快捷映射
     {
       "before": [
@@ -277,38 +313,31 @@
       ]
     },
     // easyMotion
-    {
-      "before": [
-        "g",
-        "j"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "j"
-      ]
-    },
-    {
-      "before": [
-        "g",
-        "k"
-      ],
-      "after": [
-        "<leader>",
-        "<leader>",
-        "k"
-      ]
-    },
     // {
-    //     "before": [
-    //         "s"
-    //     ],
-    //     "after": [
-    //         "<leader>",
-    //         "<leader>",
-    //         "2",
-    //         "s"
-    //     ]
+    //   "before": [
+    //     "g",
+    //     "j"
+    //   ],
+    //   "after": [
+    //     "<leader>",
+    //     "<leader>",
+    //     "j"
+    //   ]
+    // },
+    // {
+    //   "before": [
+    //     "g",
+    //     "k"
+    //   ],
+    //   "after": [
+    //     "<leader>",
+    //     "<leader>",
+    //     "k"
+    //   ]
+    // },
+    // {
+    //   "before": ["s"],
+    //   "after": ["<leader>", "<leader>", "2", "s"]
     // },
     // g系列
     {
@@ -374,6 +403,15 @@
         "references-view.findReferences"
       ]
     },
+    {
+      "before": [
+        "g",
+        "s"
+      ],
+      "commands": [
+        "java.action.navigateToSuperImplementation"
+      ]
+    },
     // leader f 系列
     {
       "before": [
@@ -391,9 +429,32 @@
         "h"
       ],
       "commands": [
-        "workbench.action.closePanel"
+        "workbench.action.closePanel",
+        "workbench.view.explorer",
+        "workbench.action.focusActiveEditorGroup"
       ]
     },
+    {
+      "before": [
+        "<leader>",
+        "H"
+      ],
+      "commands": [
+        "workbench.action.closePanel",
+        "workbench.action.closeSidebar"
+      ]
+    },
+    // leader v 系列
+    {
+      "before": [
+        "<leader>",
+        "v",
+        "u"
+      ],
+      "commands": [
+        "git.revertSelectedRanges"
+      ]
+    }
   ],
   // 插入模式下非递归
   "vim.insertModeKeyBindingsNonRecursive": [
@@ -472,5 +533,7 @@
         "_"
       ]
     }
-  ]
+  ],
+  "workbench.colorTheme": "Eva Light",
+  "java.jdt.ls.vmargs": "--add-opens=java.base/java.io=ALL-UNNAMED -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable"
 }
