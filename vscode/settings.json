@@ -7,7 +7,6 @@
   "editor.fontWeight": "700",
   "editor.lineHeight": 1.45,
   "editor.mouseWheelScrollSensitivity": 0.5,
-  "explorer.scr"
   "editor.formatOnSave": false,
   "editor.unicodeHighlight.allowedLocales": {
     "zh-hans": true,
@@ -40,16 +39,15 @@
     "gitDecoration.modifiedResourceForeground": "#386fd6",
     "gitDecoration.untrackedResourceForeground": "#c26c6c",
     "gitDecoration.deletedResourceForeground": "#a19e9e",
-    "statusBar.background": "#8aa9f9",
-    "statusBar.noFolderBackground": "#8aa9f9",
-    "statusBar.debuggingBackground": "#8aa9f9",
+    "statusBar.background": "#ba9bf8",
+    "statusBar.noFolderBackground": "#ba9bf8",
+    "statusBar.debuggingBackground": "#ba9bf8",
     "statusBar.foreground": "#434C5E",
     "statusBar.debuggingForeground": "#434C5E"
   },
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.list.mouseWheelScrollSensitivity":0.5,
-  "workbench.list.fastScrollSensitivity":5,
-
+  "workbench.list.mouseWheelScrollSensitivity": 0.5,
+  "workbench.list.fastScrollSensitivity": 5,
   "tabnine.experimentalAutoImports": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "[python]": {
@@ -58,11 +56,11 @@
     "editor.formatOnType": true
   },
   // format settings
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[typescript]": {
     "editor.tabSize": 2,
@@ -119,7 +117,7 @@
   "vim.showmodename": true,
   "vim.searchHighlightColor": "#fbea72",
   "vim.highlightedyank.enable": true,
-  "vim.highlightedyank.duration": 500,
+  "vim.highlightedyank.duration": 800,
   "vim.highlightedyank.color": "#f6c982",
   // 自带插件设置
   "vim.easymotion": true,
