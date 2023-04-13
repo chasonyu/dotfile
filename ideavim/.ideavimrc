@@ -21,8 +21,8 @@ nmap <Leader>o o<Esc>
 " 在normal下快速开启新的一行(当前行上面)
 nmap <leader>O O<Esc>
 " ctrl+hjkl切换分屏的窗口
-"nmap <BackSpace> <c-w>h
-"nmap <Delete> <c-w>l
+nmap <C-[> <c-w>h
+nmap <C-]> <c-w>l
 nmap <leader>; A;<Esc>
 nmap <leader>a A
 nmap <leader>{ A{}<Esc>i<CR>
@@ -186,6 +186,7 @@ nnoremap <leader>ff :action GotoFile<CR>
 nnoremap <leader>fo :action GotoClass<CR>
 " 窗口
 nnoremap <leader>h :action HideAllWindows<CR> :action ActivateProjectToolWindow<CR> :action EditorEscape<CR>
+nnoremap <leader>H :action HideAllWindows<CR>
 nnoremap <leader>q :action HideActiveWindow<CR>
 
 nnoremap [[ :action MethodUp<CR>
