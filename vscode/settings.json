@@ -34,11 +34,10 @@
   "files.autoSave": "afterDelay",
   "window.autoDetectColorScheme": true,
   "workbench.preferredDarkColorTheme": "Tokyo Storm AltSynt",
-  "workbench.preferredLightColorTheme": "Eva Light Italic",
+  "workbench.preferredLightColorTheme": "Eva Light",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.indent": 16,
   "workbench.colorCustomizations": {
-    "editor.background": "#f2f3f7",
     "list.errorForeground": "#d72834",
     "list.warningForeground": "#fa9b2f",
     "gitDecoration.modifiedResourceForeground": "#386fd6",

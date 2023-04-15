@@ -321,5 +321,55 @@
 		"key": "shift+alt+up",
 		"command": "-editor.action.copyLinesUpAction",
 		"when": "editorTextFocus && !editorReadonly"
-	}
+	},
+	// 上下移动当前所在内容的相同内容
+	{
+		"key": "ctrl+k",
+		"command": "editor.action.previousSelectionMatchFindAction",
+		"when": "editorFocus"
+	},
+	{
+		"key": "ctrl+j",
+		"command": "editor.action.nextSelectionMatchFindAction",
+		"when": "editorFocus"
+	},
+	{
+		"key": "cmd+w",
+		"command": "-workbench.action.closeActiveEditor"
+	},
+	// 关闭窗口
+	{
+		"key": "cmd+w",
+		"command": "workbench.action.closeActiveEditor",
+		"when": "!panelFocus && !sideBarFocus"
+	},
+	// 关闭底部panel
+	{
+		"key": "cmd+w",
+		"command": "workbench.action.closePanel",
+		"when": "panelFocus"
+	},
+	// 关闭终端
+	{
+		"key": "cmd+w",
+		"command": "workbench.action.terminal.kill",
+		"when": "terminalFocus"
+	},
+	// 关闭siderbar
+	{
+		"key": "cmd+w",
+		"command": "workbench.action.closeSidebar",
+		"when": "sideBarFocus"
+	},
+	// 调整底部的 panel 的大小
+	{
+		"key": "ctrl+alt+up",
+		"command": "workbench.action.terminal.resizePaneUp",
+		"when": "panelFocus"
+	},
+	{
+		"key": "ctrl+alt+down",
+		"command": "workbench.action.terminal.resizePaneDown",
+		"when": "panelFocus"
+	},
 ]
