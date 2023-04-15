@@ -5,9 +5,13 @@
   "editor.fontSize": 12.5,
   "editor.fontVariations": false,
   "editor.fontWeight": "700",
+  "editor.letterSpacing": 0.35,
   "editor.lineHeight": 1.45,
   "editor.mouseWheelScrollSensitivity": 0.5,
   "editor.formatOnSave": false,
+  "editor.rulers": [
+    120
+  ],
   "editor.unicodeHighlight.allowedLocales": {
     "zh-hans": true,
     "zh-hant": true
@@ -25,6 +29,7 @@
   "editor.unicodeHighlight.invisibleCharacters": false,
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
+  "editor.inlineSuggest.enabled": true,
   "security.workspace.trust.untrustedFiles": "open",
   "files.autoSave": "afterDelay",
   "window.autoDetectColorScheme": true,
@@ -39,9 +44,9 @@
     "gitDecoration.modifiedResourceForeground": "#386fd6",
     "gitDecoration.untrackedResourceForeground": "#c26c6c",
     "gitDecoration.deletedResourceForeground": "#a19e9e",
-    "statusBar.background": "#ba9bf8",
-    "statusBar.noFolderBackground": "#ba9bf8",
-    "statusBar.debuggingBackground": "#ba9bf8",
+    "statusBar.background": "#8aa9f9",
+    "statusBar.noFolderBackground": "#8aa9f9",
+    "statusBar.debuggingBackground": "#8aa9f9",
     "statusBar.foreground": "#434C5E",
     "statusBar.debuggingForeground": "#434C5E"
   },
@@ -337,6 +342,37 @@
     //   "before": ["s"],
     //   "after": ["<leader>", "<leader>", "2", "s"]
     // },
+    // 调试运行
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "r"
+      ],
+      "commands": [
+        "workbench.action.debug.run"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "d",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.debug.start"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "r",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.tasks.runTask"
+      ]
+    },
     // g系列
     {
       "before": [
@@ -533,5 +569,4 @@
     }
   ],
   "workbench.colorTheme": "Eva Light",
-  "java.jdt.ls.vmargs": "--add-opens=java.base/java.io=ALL-UNNAMED -XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -Xlog:disable"
 }
