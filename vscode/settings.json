@@ -52,6 +52,7 @@
   "workbench.tree.renderIndentGuides": "always",
   "workbench.list.mouseWheelScrollSensitivity": 0.5,
   "workbench.list.fastScrollSensitivity": 5,
+  "todohighlight.isEnable": true,
   "tabnine.experimentalAutoImports": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "[python]": {

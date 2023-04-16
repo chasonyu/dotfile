@@ -372,4 +372,9 @@
 		"command": "workbench.action.terminal.resizePaneDown",
 		"when": "panelFocus"
 	},
+	// 开关终端
+	{
+		"key": "cmd+=",
+		"command": "workbench.action.terminal.toggleTerminal"
+	},
 ]
