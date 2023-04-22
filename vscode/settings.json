@@ -60,6 +60,22 @@
     //auto indent
     "editor.formatOnType": true
   },
+  // -----------------eslint settings-----------------
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown"
+  ],
+  "postfix.languages": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
+  ],
   // format settings
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
