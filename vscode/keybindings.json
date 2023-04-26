@@ -377,4 +377,50 @@
 		"key": "cmd+=",
 		"command": "workbench.action.terminal.toggleTerminal"
 	},
+	// 内置建议
+	{
+		"key": "ctrl+i",
+		"command": "-extension.vim_ctrl+i",
+		"when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "problems.action.showQuickFixes",
+		"when": "problemFocus"
+	},
+	{
+		"key": "cmd+.",
+		"command": "-problems.action.showQuickFixes",
+		"when": "problemFocus"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "editor.action.quickFix",
+		"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "cmd+.",
+		"command": "-editor.action.quickFix",
+		"when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "workbench.action.terminal.showQuickFixes",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "cmd+.",
+		"command": "-workbench.action.terminal.showQuickFixes",
+		"when": "terminalFocus"
+	},
+	{
+		"key": "ctrl+i",
+		"command": "acceptSelectedCodeAction",
+		"when": "codeActionMenuVisible"
+	},
+	{
+		"key": "cmd+.",
+		"command": "-acceptSelectedCodeAction",
+		"when": "codeActionMenuVisible"
+	},
 ]

@@ -1,6 +1,6 @@
 {
   // editor settings
-  "editor.fontFamily": "JetBrains Mono, Menlo",
+  "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono, Menlo",
   "editor.fontLigatures": false,
   "editor.fontSize": 12.5,
   "editor.fontVariations": false,
@@ -30,6 +30,9 @@
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.inlineSuggest.enabled": true,
+  "material-icon-theme.folders.theme": "classic",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.fontWeight": "700",
   "security.workspace.trust.untrustedFiles": "open",
   "files.autoSave": "afterDelay",
   "window.autoDetectColorScheme": true,
@@ -53,13 +56,15 @@
   "workbench.list.mouseWheelScrollSensitivity": 0.5,
   "workbench.list.fastScrollSensitivity": 5,
   "todohighlight.isEnable": true,
-  "tabnine.experimentalAutoImports": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     //auto indent
     "editor.formatOnType": true
   },
+  "pylint.args": [
+    "--errors-only"
+  ],
   // -----------------eslint settings-----------------
   "eslint.probe": [
     "javascript",
@@ -503,6 +508,16 @@
       ],
       "commands": [
         "git.revertSelectedRanges"
+      ]
+    },
+    // 重构
+    {
+      "before": [
+        "<leader>",
+        "R"
+      ],
+      "commands": [
+        "abracadabra.renameSymbol"
       ]
     }
   ],
