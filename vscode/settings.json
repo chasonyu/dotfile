@@ -1,8 +1,8 @@
 {
   // editor settings
-  "editor.fontFamily": "JetBrainsMonoNL Nerd Font Mono, Menlo",
+  "editor.fontFamily": "Consolas, Menlo",
   "editor.fontLigatures": false,
-  "editor.fontSize": 12.5,
+  "editor.fontSize": 12.6,
   "editor.fontVariations": false,
   "editor.fontWeight": "700",
   "editor.letterSpacing": 0.35,
@@ -40,23 +40,23 @@
   "workbench.preferredLightColorTheme": "Eva Light",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.tree.indent": 16,
+  "workbench.colorTheme": "Tokyo Storm AltSynt",
   "workbench.colorCustomizations": {
     "list.errorForeground": "#d72834",
     "list.warningForeground": "#fa9b2f",
     "gitDecoration.modifiedResourceForeground": "#386fd6",
     "gitDecoration.untrackedResourceForeground": "#c26c6c",
     "gitDecoration.deletedResourceForeground": "#a19e9e",
-    "statusBar.background": "#8aa9f9",
-    "statusBar.noFolderBackground": "#8aa9f9",
-    "statusBar.debuggingBackground": "#8aa9f9",
+    "statusBar.background": "#ba9bf8",
+    "statusBar.noFolderBackground": "#ba9bf8",
+    "statusBar.debuggingBackground": "#ba9bf8",
     "statusBar.foreground": "#434C5E",
     "statusBar.debuggingForeground": "#434C5E"
   },
   "workbench.tree.renderIndentGuides": "always",
   "workbench.list.mouseWheelScrollSensitivity": 0.5,
   "workbench.list.fastScrollSensitivity": 5,
-  "todohighlight.isEnable": true,
-  "diffEditor.ignoreTrimWhitespace": false,
+  "window.openFoldersInNewWindow": "on",
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
     //auto indent
@@ -220,6 +220,22 @@
         ":vsp"
       ]
     },
+    {
+      "before": [
+        "H"
+      ],
+      "commands": [
+        "workbench.action.previousEditor"
+      ]
+    },
+    {
+      "before": [
+        "L"
+      ],
+      "commands": [
+        "workbench.action.nextEditor"
+      ]
+    },
     // 快捷映射
     {
       "before": [
@@ -292,7 +308,7 @@
     // 行内移动
     {
       "before": [
-        "H"
+        "HOME"
       ],
       "after": [
         "^"
@@ -300,7 +316,7 @@
     },
     {
       "before": [
-        "L"
+        "END"
       ],
       "after": [
         "g",
@@ -599,5 +615,59 @@
       ]
     }
   ],
-  "workbench.colorTheme": "Eva Light",
+  "window.nativeTabs": true,
+  // -----------------rust-----------------
+  "rust-analyzer.completion.snippets": {
+    "print": {
+      "postfix": "println",
+      "body": [
+        "println!(\"{}\", ${receiver})",
+      ],
+      "scope": "expr",
+    },
+    "Arc::new": {
+      "postfix": "arc",
+      "body": "Arc::new(${receiver})",
+      "requires": "std::sync::Arc",
+      "description": "Put the expression into an `Arc`",
+      "scope": "expr"
+    },
+    "Rc::new": {
+      "postfix": "rc",
+      "body": "Rc::new(${receiver})",
+      "requires": "std::rc::Rc",
+      "description": "Put the expression into an `Rc`",
+      "scope": "expr"
+    },
+    "Box::pin": {
+      "postfix": "pinbox",
+      "body": "Box::pin(${receiver})",
+      "requires": "std::boxed::Box",
+      "description": "Put the expression into a pinned `Box`",
+      "scope": "expr"
+    },
+    "Ok": {
+      "postfix": "ok",
+      "body": "Ok(${receiver})",
+      "description": "Wrap the expression in a `Result::Ok`",
+      "scope": "expr"
+    },
+    "Err": {
+      "postfix": "err",
+      "body": "Err(${receiver})",
+      "description": "Wrap the expression in a `Result::Err`",
+      "scope": "expr"
+    },
+    "Some": {
+      "postfix": "some",
+      "body": "Some(${receiver})",
+      "description": "Wrap the expression in an `Option::Some`",
+      "scope": "expr"
+    }
+  },
+  // "vscode_custom_css.imports": [
+  //   "file:///Users/chason/.config/vscode/index.js"
+  // ],
+  "rust-analyzer.cargo.autoreload": true,
+  "rust-analyzer.procMacro.enable": true,
 }
