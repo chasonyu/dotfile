@@ -1,8 +1,8 @@
 {
   // editor settings
-  "editor.fontFamily": "Consoles, Menlo",
+  "editor.fontFamily": "Consolas, Menlo",
   "editor.fontLigatures": false,
-  "editor.fontSize": 12.5,
+  "editor.fontSize": 12.8,
   "editor.fontVariations": false,
   "editor.fontWeight": "700",
   "editor.letterSpacing": 0.35,
@@ -34,11 +34,14 @@
   "security.workspace.trust.untrustedFiles": "open",
   "files.autoSave": "afterDelay",
   "window.autoDetectColorScheme": true,
-  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
-  "workbench.preferredLightColorTheme": "Eva Light",
+  "window.titleBarStyle": "custom",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Eva Light",
+  "workbench.preferredDarkColorTheme": "Tokyo Storm AltSynt",
+  "workbench.preferredLightColorTheme": "Eva Light",
   "workbench.tree.indent": 16,
   "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#fa9b2f",
     "list.errorForeground": "#d72834",
     "list.warningForeground": "#fa9b2f",
     "gitDecoration.modifiedResourceForeground": "#386fd6",
@@ -53,8 +56,8 @@
   "workbench.tree.renderIndentGuides": "always",
   "workbench.list.mouseWheelScrollSensitivity": 0.5,
   "workbench.list.fastScrollSensitivity": 5,
-  "workbench.colorTheme": "Eva Light",
   "window.openFoldersInNewWindow": "on",
+  "window.nativeTabs": true,
   "gitlens.heatmap.fadeLines": false,
   "gitlens.heatmap.hotColor": "#e3f7db",
   "gitlens.heatmap.coldColor": "#f9bbbf",
@@ -62,7 +65,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter",
-    //auto indent
     "editor.formatOnType": true
   },
   "pylint.args": ["--errors-only"],
@@ -117,11 +119,23 @@
   "[markdown]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "window.nativeTabs": true,
-  "vscode_custom_css.imports": ["file:///Users/chason/.config/vscode/index.js"],
   //--------------------------------------------------------------------------
   //                           vim settings start
   // -------------------------------------------------------------------------
+  // vim air-line style
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#8aa9f9", "#434C5E"],
+  "vim.statusBarColors.insert": "#cae796",
+  "vim.statusBarColors.visual": "#ba9bf8",
+  "vim.statusBarColors.visualline": "#ba9bf8",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#ee7d82",
+  "vim.statusBarColors.commandlineinprogress": "#f6c982",
+  "vim.statusBarColors.searchinprogressmode": "#ee7d82",
+  "vim.statusBarColors.easymotionmode": "#ee7d82",
+  "vim.statusBarColors.easymotioninputmode": "#ee7d82",
+  "vim.statusBarColors.surroundinputmode": "#ee7d82",
+  // vim basic settings
   "vim.leader": "<Space>",
   "vim.useCtrlKeys": true,
   "vim.incsearch": true,
@@ -131,14 +145,12 @@
   "vim.showmodename": true,
   "vim.searchHighlightColor": "#fbea72",
   "vim.highlightedyank.enable": true,
-  "vim.highlightedyank.duration": 500,
+  "vim.highlightedyank.duration": 800,
   "vim.highlightedyank.color": "#f6c982",
   // 自带插件设置
-  "vim.flash.enable": true,
-  "vim.flash.marker.backgroundColor": "#ccff88",
-  "vim.flash.marker.nextMatchBackgroundColor": "#ffb86c",
   "vim.easymotion": false,
   "vim.sneak": false,
+  "vim.flash.enable": true,
   "vim.useSystemClipboard": true,
   "vim.replaceWithRegister": true,
   // 自动切换输入法
@@ -152,8 +164,10 @@
   },
   // prettier-ignore
   "vim.normalModeKeyBindingsNonRecursive": [
+    //保持和D C命令行为一致
     { "before": ["Y"], "after": ["y", "$"] },
-    // { "before": [ "<CR>" ], "after": [ "i", "<CR>", "<Esc>" ] },
+    // 命令模式下回车直接换行
+    { "before": ["<CR>"], "after": ["i", "<CR>", "<Esc>"] },
     { "before": ["<Esc>"], "commands": [":nohl"] },
     // 窗口管理
     { "before": ["<leader>", "w", "s"], "commands": [":sp"] },
@@ -164,7 +178,6 @@
     { "before": ["<leader>", "o"], "after": ["o", "<Esc>"] },
     { "before": ["<leader>", "O"], "after": ["O", "<Esc>"] },
     { "before": ["<Leader>", "u"], "after": ["~"] },
-    // 将 u/U 和 VSCode 自身的撤销 恢复动作绑定
     { "before": ["u"], "commands": ["undo"] },
     { "before": ["U"], "commands": ["redo"] },
     // 行内移动
@@ -174,7 +187,11 @@
     { "before": ["s"], "after": ["f"] },
     { "before": ["J"], "after": ["5", "j"] },
     { "before": ["K"], "after": ["5", "k"] },
-    { "before": ["<leader>", "j" ], "after": ["J"] },
+    { "before": ["<leader>", "j"], "after": ["J"] },
+    // easyMotion
+    // { "before": [ "g", "j" ], "after": [ "<leader>", "<leader>", "j" ] },
+    // { "before": [ "g", "k" ], "after": [ "<leader>", "<leader>", "k" ] },
+    // { "before": ["s"], "after": ["<leader>", "<leader>", "2", "s"] },
     // 调试运行
     { "before": ["<leader>", "d", "r"], "commands": ["workbench.action.debug.run"] },
     { "before": ["<leader>", "d", "s"], "commands": ["workbench.action.debug.start"] },
@@ -189,15 +206,16 @@
     { "before": ["g", "U"], "commands": ["references-view.findReferences"] },
     { "before": ["g", "s"], "commands": ["java.action.navigateToSuperImplementation"] },
     // leader f 系列
-    {"before": ["<leader>", "f", "a"], "commands": ["workbench.action.showCommands"] },
-    {"before": ["<leader>", "h"],
+    { "before": ["<leader>", "f", "a"], "commands": ["workbench.action.showCommands"] },
+    { "before": ["<leader>", "h"], 
       "commands": [
         "workbench.action.closePanel",
         "workbench.view.explorer",
         "workbench.action.focusActiveEditorGroup"
       ]
     },
-    { "before": ["<leader>", "H"],
+    {
+      "before": ["<leader>", "H"],
       "commands": [
         "workbench.action.closePanel",
         "workbench.action.closeSidebar"
@@ -211,7 +229,7 @@
   // prettier-ignore
   "vim.insertModeKeyBindingsNonRecursive": [
     // 取消高亮
-    {"before": ["<Esc>"], "after": ["<Esc>"], "commands": [ { "command": ":noh" } ] }
+    { "before": ["<Esc>"], "after": ["<Esc>"], "commands": [ { "command": ":noh" } ] }
   ],
   // prettier-ignore
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -227,10 +245,60 @@
   ],
   // prettier-ignore
   "vim.operatorPendingModeKeyBindings": [
+    { "before": ["J"], "after": ["5", "j"] },
+    { "before": ["K"], "after": ["5", "k"] },
     { "before": ["HOME"], "after": ["^"] },
-    { "before": ["END"], "after": ["g", "_"] }
-  ]
-  //--------------------------------------------------------------------------
-  //                           vim settings end
-  // -------------------------------------------------------------------------
+    { "before": ["END"], "after": ["g", "_"] },
+  ],
+  // -----------------rust-----------------
+  "rust-analyzer.completion.snippets": {
+    "print": {
+      "postfix": "println",
+      "body": ["println!(\"{}\", ${receiver})"],
+      "scope": "expr"
+    },
+    "Arc::new": {
+      "postfix": "arc",
+      "body": "Arc::new(${receiver})",
+      "requires": "std::sync::Arc",
+      "description": "Put the expression into an `Arc`",
+      "scope": "expr"
+    },
+    "Rc::new": {
+      "postfix": "rc",
+      "body": "Rc::new(${receiver})",
+      "requires": "std::rc::Rc",
+      "description": "Put the expression into an `Rc`",
+      "scope": "expr"
+    },
+    "Box::pin": {
+      "postfix": "pinbox",
+      "body": "Box::pin(${receiver})",
+      "requires": "std::boxed::Box",
+      "description": "Put the expression into a pinned `Box`",
+      "scope": "expr"
+    },
+    "Ok": {
+      "postfix": "ok",
+      "body": "Ok(${receiver})",
+      "description": "Wrap the expression in a `Result::Ok`",
+      "scope": "expr"
+    },
+    "Err": {
+      "postfix": "err",
+      "body": "Err(${receiver})",
+      "description": "Wrap the expression in a `Result::Err`",
+      "scope": "expr"
+    },
+    "Some": {
+      "postfix": "some",
+      "body": "Some(${receiver})",
+      "description": "Wrap the expression in an `Option::Some`",
+      "scope": "expr"
+    }
+  },
+  "vscode_custom_css.imports": ["file:///Users/chason/.config/vscode/index.js"],
+  "rust-analyzer.cargo.autoreload": true,
+  "rust-analyzer.procMacro.enable": true
 }
+
