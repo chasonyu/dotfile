@@ -299,6 +299,11 @@
   },
   "vscode_custom_css.imports": ["file:///Users/chason/.config/vscode/index.js"],
   "rust-analyzer.cargo.autoreload": true,
-  "rust-analyzer.procMacro.enable": true
+  "rust-analyzer.procMacro.enable": true,
+  "multiCommand.commands": [
+    {
+      "command": "multiCommand.editor.action.commentLine",
+      "sequence": ["editor.action.commentLine", "cursorDown"]
+    }
+  ]
 }
-
