@@ -33,12 +33,8 @@
   "terminal.integrated.fontWeight": "700",
   "security.workspace.trust.untrustedFiles": "open",
   "files.autoSave": "afterDelay",
-  "window.autoDetectColorScheme": true,
-  "window.titleBarStyle": "custom",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Eva Light",
-  "workbench.preferredDarkColorTheme": "Tokyo Storm AltSynt",
-  "workbench.preferredLightColorTheme": "Eva Light",
+  // "window.titleBarStyle": "native",
+  "workbench.preferredDarkColorTheme": "Catppuccin Latte",
   "workbench.tree.indent": 16,
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#fa9b2f",
@@ -47,17 +43,18 @@
     "gitDecoration.modifiedResourceForeground": "#386fd6",
     "gitDecoration.untrackedResourceForeground": "#c26c6c",
     "gitDecoration.deletedResourceForeground": "#a19e9e",
-    "statusBar.background": "#ba9bf8",
-    "statusBar.noFolderBackground": "#ba9bf8",
-    "statusBar.debuggingBackground": "#ba9bf8",
-    "statusBar.foreground": "#434C5E",
-    "statusBar.debuggingForeground": "#434C5E"
+    // "statusBar.background": "#8aa9f9",
+    // "statusBar.noFolderBackground": "#8aa9f9",
+    // "statusBar.debuggingBackground": "#8aa9f9",
+    // "statusBar.foreground": "#434C5E",
+    // "statusBar.debuggingForeground": "#434C5E",
+    "editor.selectionBackground": "#f2ad5e",
+    "editor.lineHighlightBackground": "#e9dbc8"
   },
   "workbench.tree.renderIndentGuides": "always",
   "workbench.list.mouseWheelScrollSensitivity": 0.5,
   "workbench.list.fastScrollSensitivity": 5,
   "window.openFoldersInNewWindow": "on",
-  "window.nativeTabs": true,
   "gitlens.heatmap.fadeLines": false,
   "gitlens.heatmap.hotColor": "#e3f7db",
   "gitlens.heatmap.coldColor": "#f9bbbf",
@@ -68,6 +65,7 @@
     "editor.formatOnType": true
   },
   "pylint.args": ["--errors-only"],
+  "pylint.path": ["conda", "run", "-n", "lint_env", "python", "-m", "pylint"],
   // -----------------eslint settings-----------------
   "eslint.probe": [
     "javascript",
@@ -123,7 +121,7 @@
   //                           vim settings start
   // -------------------------------------------------------------------------
   // vim air-line style
-  "vim.statusBarColorControl": true,
+  // "vim.statusBarColorControl": true,
   "vim.statusBarColors.normal": ["#8aa9f9", "#434C5E"],
   "vim.statusBarColors.insert": "#cae796",
   "vim.statusBarColors.visual": "#ba9bf8",
@@ -164,92 +162,95 @@
   },
   // prettier-ignore
   "vim.normalModeKeyBindingsNonRecursive": [
-    //保持和D C命令行为一致
-    { "before": ["Y"], "after": ["y", "$"] },
-    // 命令模式下回车直接换行
-    { "before": ["<CR>"], "after": ["i", "<CR>", "<Esc>"] },
-    { "before": ["<Esc>"], "commands": [":nohl"] },
-    // 窗口管理
-    { "before": ["<leader>", "w", "s"], "commands": [":sp"] },
-    { "before": ["<leader>", "w", "v"], "commands": [":vsp"] },
-    { "before": ["H"], "commands": ["workbench.action.previousEditor"] },
-    { "before": ["L"], "commands": ["workbench.action.nextEditor"] },
-    { "before": ["<leader>", ";"], "after": ["A", ";", "<Esc>"] },
-    { "before": ["<leader>", "o"], "after": ["o", "<Esc>"] },
-    { "before": ["<leader>", "O"], "after": ["O", "<Esc>"] },
-    { "before": ["<Leader>", "u"], "after": ["~"] },
-    { "before": ["u"], "commands": ["undo"] },
-    { "before": ["U"], "commands": ["redo"] },
-    // 行内移动
-    { "before": ["HOME"], "after": ["^"] },
-    { "before": ["END"], "after": ["g", "_"] },
-    // 快速移动
-    { "before": ["s"], "after": ["f"] },
-    { "before": ["J"], "after": ["5", "j"] },
-    { "before": ["K"], "after": ["5", "k"] },
-    { "before": ["<leader>", "j"], "after": ["J"] },
-    // easyMotion
-    // { "before": [ "g", "j" ], "after": [ "<leader>", "<leader>", "j" ] },
-    // { "before": [ "g", "k" ], "after": [ "<leader>", "<leader>", "k" ] },
-    // { "before": ["s"], "after": ["<leader>", "<leader>", "2", "s"] },
-    // 调试运行
-    { "before": ["<leader>", "d", "r"], "commands": ["workbench.action.debug.run"] },
-    { "before": ["<leader>", "d", "s"], "commands": ["workbench.action.debug.start"] },
-    { "before": ["<leader>", "r", "c"], "commands": ["workbench.action.tasks.runTask"] },
-    // g系列
-    { "before": ["g", "l"], "commands": ["revealInExplorer"] },
-    { "before": ["g", "w"], "after": ["*"] },
-    { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
-    { "before": ["g", "d"], "commands": ["editor.action.goToDeclaration"] },
-    { "before": ["g", "a"], "commands": ["gitlens.toggleFileBlame"] },
-    { "before": ["g", "u"], "commands": ["editor.action.goToReferences"] },
-    { "before": ["g", "U"], "commands": ["references-view.findReferences"] },
-    { "before": ["g", "s"], "commands": ["java.action.navigateToSuperImplementation"] },
-    // leader f 系列
-    { "before": ["<leader>", "f", "a"], "commands": ["workbench.action.showCommands"] },
-    { "before": ["<leader>", "h"], 
-      "commands": [
-        "workbench.action.closePanel",
-        "workbench.view.explorer",
-        "workbench.action.focusActiveEditorGroup"
-      ]
-    },
-    {
-      "before": ["<leader>", "H"],
-      "commands": [
-        "workbench.action.closePanel",
-        "workbench.action.closeSidebar"
-      ]
-    },
-    // leader v 系列
-    { "before": ["<leader>", "v", "u"], "commands": ["git.revertSelectedRanges"] },
-    // 重构
-    { "before": ["<leader>", "R"], "commands": ["abracadabra.renameSymbol"] }
-  ],
+      //保持和D C命令行为一致
+      { "before": ["Y"], "after": ["y", "$"] },
+      // 命令模式下回车直接换行
+      { "before": ["<CR>"], "after": ["i", "<CR>", "<Esc>"] },
+      { "before": ["<Esc>"], "commands": [":nohl"] },
+      // 窗口管理
+      { "before": ["<leader>", "w", "s"], "commands": [":sp"] },
+      { "before": ["<leader>", "w", "v"], "commands": [":vsp"] },
+      { "before": ["H"], "commands": ["workbench.action.previousEditor"] },
+      { "before": ["L"], "commands": ["workbench.action.nextEditor"] },
+      { "before": ["<leader>", ";"], "after": ["A", ";", "<Esc>"] },
+      { "before": ["<leader>", "o"], "after": ["o", "<Esc>"] },
+      { "before": ["<leader>", "O"], "after": ["O", "<Esc>"] },
+      { "before": ["<Leader>", "u"], "after": ["~"] },
+      { "before": ["u"], "commands": ["undo"] },
+      { "before": ["U"], "commands": ["redo"] },
+      // 行内移动
+      { "before": ["HOME"], "after": ["^"] },
+      { "before": ["END"], "after": ["g", "_"] },
+      // 快速移动
+      { "before": ["s"], "after": ["f"] },
+      { "before": ["J"], "after": ["5", "j"] },
+      { "before": ["K"], "after": ["5", "k"] },
+      { "before": ["<leader>", "j"], "after": ["J"] },
+      // easyMotion
+      // { "before": [ "g", "j" ], "after": [ "<leader>", "<leader>", "j" ] },
+      // { "before": [ "g", "k" ], "after": [ "<leader>", "<leader>", "k" ] },
+      // { "before": ["s"], "after": ["<leader>", "<leader>", "2", "s"] },
+      // 调试运行
+      { "before": ["<leader>", "d", "r"], "commands": ["workbench.action.debug.run"] },
+      { "before": ["<leader>", "d", "s"], "commands": ["workbench.action.debug.start"] },
+      { "before": ["<leader>", "r", "c"], "commands": ["workbench.action.tasks.runTask"] },
+      // g系列
+      { "before": ["g", "l"], "commands": ["revealInExplorer"] },
+      { "before": ["g", "w"], "after": ["*"] },
+      { "before": ["g", "i"], "commands": ["editor.action.goToImplementation"] },
+      { "before": ["g", "d"], "commands": ["editor.action.goToDeclaration"] },
+      { "before": ["g", "a"], "commands": ["gitlens.toggleFileBlame"] },
+      { "before": ["g", "u"], "commands": ["editor.action.goToReferences"] },
+      { "before": ["g", "U"], "commands": ["references-view.findReferences"] },
+      { "before": ["g", "s"], "commands": ["java.action.navigateToSuperImplementation"] },
+      // leader f 系列
+      { "before": ["<leader>", "f", "a"], "commands": ["workbench.action.showCommands"] },
+      { "before": ["<leader>", "h"], 
+        "commands": [
+          "workbench.action.closePanel",
+          "workbench.view.explorer",
+          "workbench.action.focusActiveEditorGroup"
+        ]
+      },
+      {
+        "before": ["<leader>", "H"],
+        "commands": [
+          "workbench.action.closePanel",
+          "workbench.action.closeSidebar"
+        ]
+      },
+      // leader v 系列
+      { "before": ["<leader>", "v", "u"], "commands": ["git.revertSelectedRanges"] },
+      // 重构
+      { "before": ["<leader>", "R"], "commands": ["abracadabra.renameSymbol"] },
+    ],
   // prettier-ignore
   "vim.insertModeKeyBindingsNonRecursive": [
-    // 取消高亮
-    { "before": ["<Esc>"], "after": ["<Esc>"], "commands": [ { "command": ":noh" } ] }
-  ],
+      // 取消高亮
+      { "before": ["<Esc>"], "after": ["<Esc>"], "commands": [ { "command": ":noh" } ] }
+    ],
   // prettier-ignore
   "vim.visualModeKeyBindingsNonRecursive": [
-    { "before": ["s"], "after": ["f"] },
-    { "before": ["J"], "after": ["5", "j"] },
-    { "before": ["K"], "after": ["5", "k"] },
-    { "before": ["HOME"], "after": ["^"] },
-    { "before": ["END"], "after": ["g", "_"] },
-    { "before": ["<leader>", "c", "e"], "commands": ["github.copilot.interactiveEditor.explain"] },
-    { "before": ["<leader>", "c", "g"], "commands": ["github.copilot.interactiveEditor.generate"] },
-    { "before": ["<leader>", "c", "t"], "commands": ["github.copilot.interactiveEditor.generateTests"] },
-    { "before": ["<leader>", "c", "f"], "commands": ["github.copilot.interactiveEditor.fix"] },
-  ],
+      { "before": ["s"], "after": ["f"] },
+      { "before": ["J"], "after": ["5", "j"] },
+      { "before": ["K"], "after": ["5", "k"] },
+      { "before": ["HOME"], "after": ["^"] },
+      { "before": ["END"], "after": ["g", "_"] },
+      { "before": ["<leader>", "c", "e"], "commands": ["github.copilot.interactiveEditor.explain"] },
+      { "before": ["<leader>", "c", "g"], "commands": ["github.copilot.interactiveEditor.generate"] },
+      { "before": ["<leader>", "c", "t"], "commands": ["github.copilot.interactiveEditor.generateTests"] },
+      { "before": ["<leader>", "c", "f"], "commands": ["github.copilot.interactiveEditor.fix"] },
+    ],
   // prettier-ignore
   "vim.operatorPendingModeKeyBindings": [
-    { "before": ["J"], "after": ["5", "j"] },
-    { "before": ["K"], "after": ["5", "k"] },
-    { "before": ["HOME"], "after": ["^"] },
-    { "before": ["END"], "after": ["g", "_"] },
-  ],
+      { "before": ["J"], "after": ["5", "j"] },
+      { "before": ["K"], "after": ["5", "k"] },
+      { "before": ["HOME"], "after": ["^"] },
+      { "before": ["END"], "after": ["g", "_"] },
+    ],
+  //--------------------------------------------------------------------------
+  //                           vim settings end
+  // -------------------------------------------------------------------------
   // -----------------rust-----------------
   "rust-analyzer.completion.snippets": {
     "print": {
@@ -297,7 +298,7 @@
       "scope": "expr"
     }
   },
-  "vscode_custom_css.imports": ["file:///Users/chason/.config/vscode/index.js"],
+  // "vscode_custom_css.imports": ["file:///Users/chason/.config/vscode/index.js"],
   "rust-analyzer.cargo.autoreload": true,
   "rust-analyzer.procMacro.enable": true,
   "multiCommand.commands": [
@@ -305,5 +306,63 @@
       "command": "multiCommand.editor.action.commentLine",
       "sequence": ["editor.action.commentLine", "cursorDown"]
     }
-  ]
+  ],
+  "alt-catppuccin.syntaxMode": "monokai",
+  "workbench.iconTheme": "material-icon-theme",
+  // "update.mode": "manual",
+  // "extensions.autoUpdate": "onlySelectedExtensions",
+  "extensions.closeExtensionDetailsOnViewChange": true,
+  // "python.venvPath": "${workspaceFolder}/.venv",
+  // "editor.semanticTokenColorCustomizations": {
+  //   "enabled": true, // enable for all themes
+  //   "rules": {
+  //     "*.static": {
+  //       "foreground": "#ff0000",
+  //       "fontStyle": "bold"
+  //     },
+  //     "property": {
+  //       //属性
+  //       "foreground": "#10ec98",
+  //       "fontStyle": "bold"
+  //     },
+  //     "macro": {
+  //       //宏
+  //       "foreground": "#ec106c",
+  //       "fontStyle": "bold"
+  //     },
+  //     "function": {
+  //       //函数
+  //       "foreground": "#14f0b2",
+  //       "fontStyle": "bold"
+  //     },
+  //     "variable.global": {
+  //       //全局变量
+  //       "foreground": "#beda22",
+  //       "fontStyle": "bold"
+  //     },
+  //     "variable.local": {
+  //       //局部变量
+  //       "foreground": "#2271da",
+  //       "fontStyle": "bold"
+  //     }
+  //   }
+  // },
+  "window.systemColorTheme": "auto",
+  "pyqt-integration.pyuic.cmd": "/Users/chason/opt/pyside6-fluent-designer/.venv/bin/pyside6-uic",
+  "pyqt-integration.pyrcc.cmd": "/Users/chason/opt/pyside6-fluent-designer/.venv/bin/pyside6-rcc",
+  "accessibility.verbosity.inlineChat": false,
+  "github.copilot.editor.enableCodeActions": false,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "gitlens.advanced.messages": {
+    "suppressFileNotUnderSourceControlWarning": true
+  },
+  "pyqt-integration.qtdesigner.path": "/Users/chason/opt/pyside6-fluent-designer/launch-fluent-designer",
+  "workbench.preferredLightColorTheme": "Visual Studio Light",
+  "workbench.colorTheme": "Catppuccin Latte Bordered",
+  "Codegeex.Privacy": true
 }
